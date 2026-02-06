@@ -1,0 +1,19 @@
+@use "palette" as *;
+@use "./switcher" as *;
+@use "./switcher-small" as *;
+
+.ds-switcher-green {
+  @extend .ds-switcher;
+}
+
+.ds-switcher-green.ds-switcher-double + label > .ds-switcher-control {
+  background-color: rgba(92, 201, 113, 1);
+}
+
+.ds-switcher-green.ds-switcher-double + label.ds-switcher-control {
+  background-color: rgba(92, 201, 113, 1);
+}
+
+.ds-switcher-green:checked+label .ds-switcher-control {
+  background-color: rgba(92, 201, 113, 1);
+}

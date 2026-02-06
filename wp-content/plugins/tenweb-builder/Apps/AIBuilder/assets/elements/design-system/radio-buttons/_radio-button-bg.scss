@@ -1,0 +1,31 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/font" as *;
+
+
+.ds-radio-bg + label {
+  height: 20px;
+  width: 20px;
+  @include font(12px, 400, 18px);
+
+  &:before {
+    background: $white-smoke;
+    position: relative;
+    border: 1px solid $eggshell;
+    width: 20px;
+    height: 20px;
+  }
+  &:not(:disabled):not(:checked)+label:hover:before {
+    border-color: $eggshell!important;
+  }
+}
+.ds-radio-bg {
+  &:not(:disabled):not(:checked)+label:hover:before {
+    border-color: $eggshell;
+  }
+  &:checked + label:after {
+    width: 11.429px;
+    height: 11.429px;
+    background: $black;
+    transform: translate(4.28px, 4.28px);
+  }
+}

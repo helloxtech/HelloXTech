@@ -1,0 +1,52 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+@use "../mixins/font" as *;
+
+
+.ds-btn-medium {
+  width: 120px;
+  height: 30px;
+
+  border-radius: 6px;
+  padding: 7px 15px;
+
+  span {
+    @include font(12px, 400, 16px);
+  }
+
+  &:not(.ds-btn-icon) {
+    i {
+      display: none;
+    }
+  }
+
+  &.ds-btn-icon {
+    width: 30px;
+    padding: 8px;
+
+    i {
+      font-size: 14px;
+    }
+  }
+
+  .ds-spinner-circle {
+    font-size: 14px;
+  }
+
+  &.ds-btn-outline:not(&.ds-btn-icon) {
+    padding: 6px 14px;
+  }
+
+  &.ds-btn-outline:not(&.ds-btn-icon).ds-btn-loading {
+    padding: 7px 14px;
+  }
+
+  &.ds-btn-outline.ds-btn-icon {
+    padding: 7px;
+  }
+
+  &.ds-btn-outline.ds-btn-icon.ds-btn-icon.ds-btn-loading {
+    padding: 8px;
+  }
+}

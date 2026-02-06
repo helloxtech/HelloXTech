@@ -1,0 +1,117 @@
+.twbb-ai-builder__left-banner-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f5f7;
+}
+.twbb-ai-builder__left-banner{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: shrinkAndFade 3s ease-out forwards;
+}
+
+.choose-business-type{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  .label{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    height: 36px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    &::placeholder{
+      opacity: 0.5;
+    }
+    &:focus{
+      padding: 8px 15px 8px 40px;
+      background: url(../images/icons/search.svg) no-repeat 16px;
+      background-position: 16px 10px;
+      border-color: #eaeaea;
+      box-shadow: none;
+      &::placeholder{
+        opacity: 0.2;
+      }
+    }
+  }
+  .select_container{
+    position: relative;
+    &.active{
+      .options_scroll{
+        display: block;
+      }
+    }
+  }
+  .options_scroll{
+    position: absolute;
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    max-height: 185px;
+    top: 46px;
+    left: 0;
+  }
+  .options{
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    .option{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      width: 100%;
+      padding: 7px 10px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0;
+      &:hover{
+        background: #7676800f;
+      }
+      &.selected {
+        background: #76768014;
+      }
+      .highlighted {
+        color: #3339f1;
+        display: inline;
+      }
+    }
+  }
+}
+
+@keyframes shrinkAndFade {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

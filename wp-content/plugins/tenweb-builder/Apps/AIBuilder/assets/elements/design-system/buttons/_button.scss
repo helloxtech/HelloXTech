@@ -1,0 +1,83 @@
+@use "../variables/palette" as *;
+@use "../mixins/font" as *;
+@use "../mixins/flex" as *;
+
+
+.ds-btn {
+  @include flex(inline-flex, center, center);
+
+  height: 40px;
+  width: 180px;
+  box-sizing: border-box;
+
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 24px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: $iron-btn;
+  color: $black;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 150ms linear, color 150ms linear;
+
+  &-s {
+    padding: 6px 15px;
+  }
+  span {
+    @include font(12px, 400, 18px);
+    @include flex(inline-flex, center, center);
+    gap: 8px;
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .ds-spinner-circle {
+    font-size: 18px;
+  }
+
+  &.small-radius {
+    border-radius: 6px !important;
+  }
+
+  &-blue, &-red, &-yellow, &-green, &-outline-blue, &-outline-red, &-outline-yellow, &-outline-green {
+    .ds-spinner-circle {
+      &:before {
+        color: rgba($white, 0.3);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: rgba($iron-btn, 0.8);
+  }
+
+  &:disabled, &.ds-btn-disabled, &.ds-btn-loading {
+    pointer-events: none;
+    background-color: rgba($iron-btn, 0.5);
+    color: rgba($black, 0.5);
+  }
+
+  &.ds-btn-icon {
+    width: 40px;
+    padding: 10px;
+  }
+
+  &.rectangle {
+    border-radius: 6px;
+  }
+
+  &.tall {
+    height: 40px;
+  }
+
+  &.m {
+    height: 36px;
+  }
+  &.short {
+    width: 82px;
+  }
+}

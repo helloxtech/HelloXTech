@@ -1,0 +1,28 @@
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+//.text-center { text-align: center !important; }
+//.text-left { text-align: left !important; }
+//.text-right { text-align: right !important; }
+
+.text-bold { font-weight: bold !important; }
+.text-semibold { font-weight: 700 !important; }
+.text-italic { font-style: italic !important; }
+.text-underline { text-decoration: underline !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capital { text-transform: capitalize !important; }
+
+.text-overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

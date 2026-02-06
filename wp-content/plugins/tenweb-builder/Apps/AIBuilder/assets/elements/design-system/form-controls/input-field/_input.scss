@@ -1,0 +1,16 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+@use "../../mixins/font" as *;
+
+.ds-fc-input {
+  width: 360px;
+  height: 40px;
+  padding: 16px 10px;
+  /*
+  @include font(14px, 400, 20px);
+  */
+  &:focus {
+    outline: 0;
+  }
+}

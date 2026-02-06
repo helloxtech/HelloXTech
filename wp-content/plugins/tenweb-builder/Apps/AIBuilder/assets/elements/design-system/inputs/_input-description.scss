@@ -1,0 +1,25 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/font" as *;;
+
+
+.ds-input-desc, .ds-input-error-msg {
+  position: absolute;
+  display: block;
+  padding: 3px 0 0 3px;
+  text-align: left;
+  @include font(12px, 400, 18px);
+  font-style: italic;
+  color: rgba($black, 0.5);
+}
+
+.ds-input-desc {
+  bottom: 0;
+ }
+
+.ds-input-desc~.ds-input-error-msg {
+  position: static;
+}
+
+.ds-input-error-msg {
+  color: $red-orange;
+}

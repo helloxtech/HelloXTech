@@ -1,0 +1,51 @@
+.twbb-ai-builder__left #outline-view {
+  width: 100%;
+  height: 100%;
+}
+
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right {
+  max-width: 340px;
+  margin-bottom: 70px;
+  height: calc(100% - 70px);
+  position: relative;
+}
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right .title-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+}
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right .sitemap-steps {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right .sitemap-steps > span {
+  margin-top: 14px;
+  display: inline-block;
+  width: 100%;
+}
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right .notification-gray {
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+  border-radius: 6px;
+  background: #F9F9F9;
+  padding: 8px 12px 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right .notification-gray p {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+}
+.twbb-ai-builder__container[data-type=outline] .twbb-ai-builder__right .notification-gray .icon {
+  width: 12px;
+  height: 12px;
+}
+
+/*# sourceMappingURL=outline.css.map */

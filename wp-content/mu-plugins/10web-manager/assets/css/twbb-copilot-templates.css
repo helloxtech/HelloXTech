@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.twbbm-copilot-tour-layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.twbbm-copilot-tour-container {
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1180px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #0B0D0D;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+.twbbm-copilot-tour-descr-cont {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+.twbbm-copilot-tour-video-cont {
+    flex-grow: 1;
+    position: relative;
+}
+
+.twbbm-copilot-tour-video-cont>img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.twbbm-copilot-tour-welcome {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 150% */
+}
+
+.twbbm-copilot-tour-title {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 160% */
+    margin-bottom: 8px;
+}
+
+.twbbm-copilot-tour-description {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    margin-bottom: 10px;
+}
+
+.twbbm-copilot-tour-subtitle {
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+    margin: 30px 0 4px 0;
+}
+
+.twbbm-copilot-tour-subdescr {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+
+.twbbm-copilot-tour-subdescr.twbbm-copilot-tour-update-text{
+    margin-top: 48px;
+}
+
+.twbbm-copilot-tour-button {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    cursor: pointer;
+    width: 360px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #3339F1;
+    color: #fff;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 142.857% */
+    margin: 20px 0px 16px 0px;
+}
+
+.twbbm-copilot-tour-button:hover {
+    opacity: 0.8;
+}
+.twbbm-copilot-tour_remind_button{
+    position: absolute;
+    top:30px;
+    right:30px;
+    display: flex;
+    width: 130px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    border: 1px solid rgba(118, 118, 128, 0.42);
+    background: rgba(255, 255, 255, 0.60);
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(2px);
+    cursor:pointer;
+}
+.twbbm-copilot-tour_remind_button:hover .twbbm-copilot-tour_remind_button_text{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+.twbbm-copilot-tour_remind_button_text{
+    color: #000;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+.twbbm-copilot-tour_remind_button_icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/CoPilot/remind_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.twbbm-copilot-tour-button-descr {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+    margin: 0px;
+}
+
+.twbbm-copilot-images-row {
+    display: flex;
+    margin: 10px 0;
+}
+
+.twbbm-copilot-image-item {
+    display: flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 160% */
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.twbbm-copilot-image-item:not(.twbbm-copilot-image-item-active):hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.twbbm-copilot-image-item-active {
+    background: #3339F1;
+    padding: 4px 12px 4px 12px;
+    position: relative;
+}
+.twbbm-copilot-circle-loader {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    color: #3498db;
+    margin-left: 4px;
+}
+
+.twbbm-copilot-circle-loader > svg {
+    transform: rotate(-90deg); /* Rotate so that the progress starts at the top */
+}
+
+.twbbm-copilot-progress-circle {
+    stroke-dasharray: 283; /* This value is 2 * PI * r (2 * 3.14 * 45 = 283) */
+    stroke-dashoffset: 283; /* Initially hide the stroke (same as dasharray) */
+    transition: stroke-dashoffset 2.8s linear; /* 3 seconds fill time */
+}
+
+
+.twbbm-copilot-tour-button_loading .twbbm-copilot-tour-button_text, .twbbm-copilot-tour-button_success .twbbm-copilot-tour-button_text{
+    display: none;
+}
+
+.twbbm-copilot-tour-button.twbbm-copilot-tour-button_loading{
+    opacity: 1;
+    background-color: rgba(51, 57, 241, 0.50);
+    cursor: default;
+    position: relative;
+}
+.twbbm-copilot-tour-button.twbbm-copilot-tour-button_loading:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-image: url("../images/CoPilot/introducing_button_loading.svg");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    animation: twbbm_rotateBg 2s linear infinite;
+}
+.twbbm-copilot-tour-button.twbbm-copilot-tour-button_success:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/CoPilot/introducing_button_success.svg");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+}
+@keyframes twbbm_rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

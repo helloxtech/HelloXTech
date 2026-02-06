@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_54405" data-name="Rectangle 54405" width="55" height="55" rx="6" transform="translate(380 152)" fill="rgba(255,255,255,0.05)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_95699" data-name="Mask Group 95699" transform="translate(-380 -152)" clip-path="url(#clip-path)">
+    <g id="radiolist" transform="translate(382.729 154.729)">
+      <path id="Path_172425" data-name="Path 172425" d="M15.062,19.126a1.406,1.406,0,0,0,0,1.988L20.481,26.5,32.558,14.813a1.406,1.406,0,0,0-1.875-2.025l-10.108,9.77-3.45-3.375a1.406,1.406,0,0,0-2.063-.056Z" transform="translate(4.814 3)" fill="#fff"/>
+      <path id="Path_172426" data-name="Path 172426" d="M39.06,25.9A1.406,1.406,0,0,0,37.654,27.3v6.3A4.051,4.051,0,0,1,33.6,37.654H11.963V16.013a4.051,4.051,0,0,1,4.051-4.051h6.3a1.406,1.406,0,1,0,0-2.813h-6.3A6.863,6.863,0,0,0,9.15,16.013V40.391H33.528a6.863,6.863,0,0,0,6.863-6.863V27.3A1.406,1.406,0,0,0,39.06,25.9Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

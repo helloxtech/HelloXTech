@@ -1,0 +1,31 @@
+.twbb-shape-tool-container .twbb-shape-tool {
+    background-image: url(../images/shape_icon_black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+}
+.twbb-shape-tool-container{
+    width: 24px !important;
+    height: 24px;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.twbb-shape-tool-container:hover, .twbb-shape-tool-container.active{
+    background-color: #000;
+    border-radius: 4px;
+}
+.twbb-shape-tool-container:hover .twbb-shape-tool, .twbb-shape-tool-container.active .twbb-shape-tool{
+    filter: invert(1);
+}
+.twbb-shape-tool-container.twbb-fe-select-tool {
+    width: 30px;
+}
+
+.twbb-shape-tool-container.twbb-fe-select-tool::before {
+    display: none;
+}
+
+.twbb-shape-tool-container .twbb-fe-dropdown {
+    width: 85px;
+}

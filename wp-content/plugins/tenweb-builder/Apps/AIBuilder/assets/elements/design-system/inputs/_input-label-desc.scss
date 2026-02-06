@@ -1,0 +1,12 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/font" as *;
+
+
+.ds-input-label-desc {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 4px;
+  text-align: left;
+  @include font(12px, 400, 18px);
+  color: $black;
+}

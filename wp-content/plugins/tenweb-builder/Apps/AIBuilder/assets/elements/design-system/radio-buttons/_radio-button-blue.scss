@@ -1,0 +1,41 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "./radio-button" as *;
+
+
+.ds-radio-blue {
+  @extend .ds-radio;
+
+  +label:before {
+    border: 1px solid rgba($sonic-silver, 0.16);
+  }
+
+  &:checked+label:after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $fun-blue;
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    transform: none;
+    box-sizing: border-box;
+  }
+
+  &:checked {
+    border: 1px solid rgba($sonic-silver, 0.16);
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: $fun-blue;
+      border-radius: 50%;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+    }
+  }
+
+}

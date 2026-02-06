@@ -1,0 +1,9 @@
+@use "../variables/palette" as *;
+@use "./label" as *;
+
+
+.ds-label-blue {
+  @extend .ds-label;
+
+  background: $fun-blue;
+}

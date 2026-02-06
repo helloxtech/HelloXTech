@@ -1,0 +1,6 @@
+.elementor-panel #elementor-panel-header-wrapper #elementor-panel-header #elementor-panel-header-title img {
+  background-image: url(../../images/white_label_logo.svg);
+}
+.elementor-element .twbb-widget-icon:after {
+  content: '';
+}

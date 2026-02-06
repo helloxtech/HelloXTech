@@ -1,0 +1,111 @@
+@use "../mixins/font" as *;
+@use "../mixins/flex" as *;
+@use "../mixins/responsive" as *;
+@use "../variables/palette" as *;
+
+
+.ds-notification {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 8px 16px;
+  * {
+    font-family: "Evergrow Sans", sans-serif;
+  }
+
+  &.rounded {
+    border-radius: 8px;
+  }
+
+  &.small {
+    padding: 4px 8px;
+    border-radius: 6px;
+    width: fit-content;
+  }
+
+  & > div {
+    @include flex(flex, stretch, flex-start);
+    gap: 4px;
+
+    i {
+      font-size: 18px;
+    }
+
+    span, p {
+      @include font(12px, 500, 18px);
+
+      &.semibold {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .ds-notification-close {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.ds-notification-centered > div {
+    justify-content: center;
+  }
+
+  .bright-gray {
+    color: $black;
+
+    *,
+    &:before,
+    &:after {
+      color: $black;
+    }
+  }
+
+  a {
+    color: $fun-blue;
+    @include font(12px, 600, 18px);
+
+    &.black {
+      color: $black;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: rgba($fun-blue, 0.5);
+    }
+
+    &.underline {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .small {
+    @include font(12px, 400, 18px);
+  }
+
+  .semibold {
+    font-weight: 600;
+  }
+}
+
+/* usage
+<div class="ds-notification-success ds-notification-centered">
+  <div>
+    <i class="db-icon db-icon-ds-checkmark-bg"></i>
+    <p>
+      <b>main.</b> Lorem ipsum dolor sit amet.
+    </p>
+  </div>
+  <a class="ds-notification-close"><i class="db-icon db-icon-ds-close"></i></a>
+</div>
+ */

@@ -1,0 +1,73 @@
+image: dc.10web.io:5050/vanush/deploy-script-test-project:latest
+variables:
+  S3_BUCKET_NAME: "10web-products-staging"
+  PRODUCTION_S3_BUCKET_NAME: "10web-products-production"
+  SITEURL: "https://devcore.10web.io/api/git/store"
+  PRODUCTION_SITEURL: "https://core.10web.io/api/git/store"
+  TESTING_SITEURL: "https://testcore.10web.io/api/git/store"
+  S3_BUCKET_NAME_TESTING: "10web-products-testing"
+before_script:
+  - 'which ssh-agent || ( apk update -y && apk add openssh )'
+  # run ssh-agent
+  - eval $(ssh-agent -s)
+  # FOR 10WEB UTILS PULL WHILE COMPOSER INSTALL!
+  # add ssh key stored in GITLAB_CI_DOCKER_PRIVATE_KEY variable to the agent store ( cat id_rsa | base64 -w0 )
+  - ssh-add <(echo "$GITLAB_CI_DOCKER_PRIVATE_KEY" | base64 -d)
+  - mkdir -p ~/.ssh/ && touch ~/.ssh/gitlab_ci_docker_deploy_private_key
+  - echo "$GITLAB_CI_DOCKER_PRIVATE_KEY" > ~/.ssh/gitlab_ci_docker_deploy_private_key
+  - chmod 400 ~/.ssh/gitlab_ci_docker_deploy_private_key
+  # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
+  # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  - pwd
+  # configure composer cache folder in CI for faster build
+  - composer config -g cache-dir "$(pwd)/.composer-cache"
+  - composer install --optimize-autoloader --no-dev --prefer-dist
+  # remove .git folders in packages that are downloaded from git repositories
+  - rm -r vendor/10web/*/.git
+stages:
+  - test
+
+test_securityChecker:
+  before_script:
+    - curl https://get.symfony.com/cli/installer -o - | bash
+    - mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
+  stage: test
+  image: vanush/gitlab-ci-laravel:php7.3
+  script:
+    - /usr/local/bin/symfony security:check
+  allow_failure: false
+
+test_phpCodeSniffer:
+  stage: test
+  image: vanush/gitlab-ci-laravel:php7.3
+  script:
+    - composer install --optimize-autoloader --prefer-dist
+    - composer phpcs
+  allow_failure: false
+  cache:
+    paths:
+      - .composer-cache/
+
+test_php5.6Compatibility:
+  stage: test
+  image: vanush/gitlab-ci-laravel:php7.3
+  script:
+    - composer install --optimize-autoloader --prefer-dist
+    - composer phpcs-compatibility-check
+  allow_failure: false
+  cache:
+    paths:
+      - .composer-cache/
+
+test_phpCodeStyle:
+  stage: test
+  image: vanush/gitlab-ci-laravel:php7.4
+  script:
+    - composer install --optimize-autoloader --prefer-dist
+    - composer sniff-codestyle
+  allow_failure: false
+  cache:
+    paths:
+      - .composer-cache/

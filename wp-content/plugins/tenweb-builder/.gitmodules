@@ -1,0 +1,4 @@
+[submodule "website-builder-package"]
+	path = website-builder-package
+	url = ssh://git@gitlab.10web.io:6202/plugins/website-builder-package.git
+	branch = main

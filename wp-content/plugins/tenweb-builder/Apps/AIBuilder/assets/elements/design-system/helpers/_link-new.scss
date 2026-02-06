@@ -1,0 +1,43 @@
+@use "../mixins/font" as *;
+@use "../variables/palette" as *;
+
+.ds-link-new {
+  color: $black;
+  cursor: pointer;
+  text-decoration: underline;
+  @include font(12px, 400, 18px);
+
+  &-white {
+    @extend .ds-link-new;
+    color: $white;
+  }
+
+  &-black {
+    @extend .ds-link-new;
+    color: $black;
+  }
+
+  &-blue {
+    @extend .ds-link-new;
+    color: $fun-blue;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &-blue {
+    @extend .ds-link-new;
+    color: $fun-blue;
+  }
+
+  &.initial {
+    font-size: initial;
+    line-height: initial;
+  }
+
+  &.unset-size {
+    font-size: unset;
+    line-height: initial;
+  }
+}

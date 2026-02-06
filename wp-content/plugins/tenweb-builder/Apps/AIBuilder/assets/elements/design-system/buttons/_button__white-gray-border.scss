@@ -1,0 +1,41 @@
+@use "../variables/palette" as *;
+@use "../mixins/font" as *;
+@use "./button" as *;
+
+
+.ds-btn-white-gray-border {
+  @extend .ds-btn;
+  background-color: $white;
+  color: $black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: 1px solid rgba($sonic-silver, 0.16);
+
+  &.white-bg {
+    background-color: $white;
+  }
+
+  span {
+    @include font(12px, 400, 18px);
+  }
+
+  &:hover {
+    border-radius: 8px;
+    background-color: $cool-gray;
+    border: 1px solid rgba($sonic-silver, 0.16);
+    color: rgba($black, 0.8);
+  }
+
+  &:disabled, &.ds-btn-disabled {
+    background-color: rgba($cool-gray, 0.5);
+    color: rgba($black, 0.5) !important;
+    border: 1px solid rgba($sonic-silver, 0.16);
+    pointer-events: none;
+  }
+
+  &.ds-btn-loading {
+    background-color: rgba($cool-gray, 0.5);
+    border: 1px solid rgba($sonic-silver, 0.16);
+    color: $black;
+  }
+}

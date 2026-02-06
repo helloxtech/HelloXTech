@@ -1,0 +1,38 @@
+@use "../variables/palette" as *;
+@use "../mixins/font" as *;
+
+.ds-card-radio {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba($black, 0.2);
+  border-radius: 6px;
+  padding: 10px 12px;
+  cursor: pointer;
+
+  input+label {
+    position: absolute;
+    top: 8px; right: 8px;
+    pointer-events: none;
+  }
+
+  .ds-card-radio-text {
+    @include font(12px, 600, 18px, !important);
+    text-transform: capitalize;
+    color: rgba($black, 0.5);
+    b {
+      color: $black;
+    }
+  }
+
+  &.active {
+    border-color: $fun-blue;
+  }
+}
+
+/*
+ <div class="ds-card-radio" [ngClass]="{'active': true}">
+    <input class="ds-radio ds-radio-small" type="radio" id="rd" [value]="value" name="rdb">
+    <label for="rd"></label>
+    <p class="ds-card-radio-text" [innerHTML]="text"></p>
+  </div>
+ */

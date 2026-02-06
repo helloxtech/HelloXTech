@@ -1,0 +1,116 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+@use "../mixins/font" as *;
+
+.ds-btn-xxs:not(.ds-btn-icon) {
+  width: 100px;
+  height: 30px;
+
+  span {
+    @include font(12px, 400, 16px);
+  }
+}
+
+.ds-btn-xs:not(.ds-btn-icon) {
+  width: 111px;
+  height: 40px;
+
+  span {
+    @include font(14px, 400, 20px);
+  }
+}
+
+.ds-btn-s:not(.ds-btn-icon) {
+  width: 150px;
+  height: 30px;
+
+  span {
+    @include font(12px, 400, 18px);
+  }
+
+  &.tall {
+    height: 40px;
+  }
+
+  &.m {
+    height: 36px;
+  }
+  &.short {
+    width: 82px;
+  }
+}
+
+.ds-btn-m:not(.ds-btn-icon) {
+  width: 180px;
+}
+
+.ds-btn-ms:not(.ds-btn-icon) {
+  width: 130px;
+  &.m {
+    height: 36px;
+  }
+}
+
+.ds-btn-m-to-l:not(.ds-btn-icon) {
+  width: 220px;
+  height: 40px;
+}
+
+.ds-btn-medium-large {
+  width: 200px;
+  height: 30px;
+
+  &.m {
+    height: 36px;
+
+    span {
+      @include font(14px, 400, 18px);
+    }
+  }
+    &.l {
+    width: 227px;
+
+    span {
+      @include font(14px, 400, 18px);
+    }
+  }
+
+  &.tall {
+    height: 40px;
+  }
+
+  span {
+    @include font(12px, 400, 18px);
+  }
+}
+
+.ds-btn-cancel:not(.ds-btn-icon) {
+  width: 73px;
+  &.m {
+    height: 36px;
+  }
+}
+
+.ds-btn-big:not(.ds-btn-icon) {
+  width: 192px;
+  &.m {
+    height: 36px;
+  }
+}
+
+.ds-btn-l:not(.ds-btn-icon) {
+  width: 260px;
+}
+
+.ds-btn-ls:not(.ds-btn-icon) {
+  width: 335px;
+}
+
+.ds-btn-xl:not(.ds-btn-icon) {
+  width: 360px;
+}
+
+.ds-btn-max:not(.ds-btn-icon) {
+  width: 100%;
+}

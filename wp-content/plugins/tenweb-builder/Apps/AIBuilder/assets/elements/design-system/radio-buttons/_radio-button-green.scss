@@ -1,0 +1,18 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "./radio-button" as *;
+
+
+.ds-radio-green {
+  @extend .ds-radio;
+  &:checked+label:after {
+    background-color: $forest-green;
+  }
+
+  &:not(:disabled):not(:checked)+label:hover:before {
+    border-color: $forest-green;
+  }
+
+  &:not(:disabled):not(:checked)+label:hover:before {
+    border-color: $forest-green;
+  }
+}

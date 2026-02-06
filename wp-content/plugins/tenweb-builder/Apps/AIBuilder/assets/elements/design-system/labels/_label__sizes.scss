@@ -1,0 +1,25 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+@use "../mixins/font" as *;
+
+.ds-label-m {
+  width: 216px;
+  height: 40px;
+}
+
+.ds-label-small {
+  height: 20px;
+  cursor: unset;
+
+  span {
+    @include font(12px, 600, 18px);
+    i {
+      font-size: 16px;
+    }
+
+    img {
+      height: 16px; width: 16px;
+    }
+  }
+}

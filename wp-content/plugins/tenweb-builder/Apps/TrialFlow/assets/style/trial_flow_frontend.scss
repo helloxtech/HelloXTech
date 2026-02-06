@@ -1,0 +1,304 @@
+$assetPath :"../images";
+html{
+  margin-top: 0 !important;
+}
+body.margin-top:not(.elementor-editor-active){
+  padding-top: 66px;
+}
+body.scroll_disclaimer{
+  position: fixed;
+  overflow-y: scroll;
+  width: calc(100% - 17px);
+}
+.twbb-tf-top-bar{
+  display:none;
+  position: fixed;
+  z-index: 9999999;
+  top:0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(118, 118, 128, 0.16);
+  background: #F4F4F5;
+  padding: 14px 0;
+  &__tooltip-container{
+    position: relative;
+    &:hover{
+      .twbb-tf-top-bar__tooltip{
+        display: block;
+      }
+    }
+  }
+  &__tooltip{
+    display: none;
+    position: absolute;
+    left:0;
+    top: 48px;
+    border-radius: 6px;
+    border: 1px solid rgba(118, 118, 128, 0.04);
+    padding: 5px 10px;
+    background: #000;
+    white-space: nowrap;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  &__container{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 18px;
+      height: 18px;
+    }
+    .twbb-tf-top-bar__logo {
+      width: 38px;
+      height: 38px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__responsive{
+    border-radius: 8px;
+    background: rgba(118, 118, 128, 0.08);
+    display: flex;
+    width: 72px;
+    height: 38px;
+    padding: 2px;
+    position: relative;
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: #FFF;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
+      transition: left .1s ease-in-out;
+    }
+    .device{
+      display: flex;
+      width: 34px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    &[data-active="mobile"]{
+      &:before{
+        left: 36px;
+      }
+    }
+  }
+  &__right{
+    display: flex;
+    align-items: center;
+    .text{
+      color: #000;
+      text-align: right;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+  &__edit-button{
+    border-radius: 8px;
+    background: #3339F1;
+    width: 133px;
+    height: 36px;
+    color: #FFF !important;
+    font-size: 12px !important;
+    font-weight: 400;
+    line-height: 18px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+
+
+  .twbb-tf-people-animation-description {
+    font-family: 'Evergrow-Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: right;
+
+    background: linear-gradient(
+                    92.29deg,
+                    #000000 2.87%,
+                    rgba(0, 0, 0, 0.3) 49.62%,
+                    #000000 99.26%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: shimmer 3s linear infinite;
+
+    @keyframes shimmer {
+      0% {
+        background-position: 100% 0; // start from right
+      }
+      100% {
+        background-position: -100% 0; // move to left
+      }
+    }
+  }
+  .twbb-tf-people-description {
+    font-family: 'Evergrow-Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: right;
+
+  }
+  .twbb-tf-people-images {
+    width: 151px;
+    height: 36px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 24px;
+    .twbb-tf-people-item {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      border: 2px solid #ffffff;
+      &:nth-of-type(1) {
+        left: 0;
+        background: url("../images/avatar1.jpg") no-repeat center;
+      }
+      &:nth-of-type(2) {
+        left: 29px;
+        background: url("../images/avatar2.jpg") no-repeat center;
+      }
+      &:nth-of-type(3) {
+        left: 58px;
+        background: url("../images/avatar3.jpg") no-repeat center;
+      }
+      &:nth-of-type(4) {
+        left: 87px;
+        background: url("../images/avatar4.jpg") no-repeat center;
+      }
+      &:nth-of-type(5) {
+        left: 116px;
+        background: url("../images/avatar5.jpg") no-repeat center;
+      }
+    }
+
+  }
+}
+#twbb-tf-mobile-iframe-container{
+  width: 100%;
+  height: calc(100% - 66px);
+  position: fixed;
+  top: 66px;
+  left: 0;
+  z-index: 999999;
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: opacity 0.2s;
+  &.active{
+    opacity: 1;
+    pointer-events: unset;
+    #twbb-tf-mobile-iframe {
+      width: 375px;
+    }
+  }
+}
+#twbb-tf-mobile-iframe {
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px #0000001f, 0 3px 1px #0000000a;
+}
+
+.twbb-tf-wesite-ready-layer {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 9999999;
+  .twbb-tf-wesite-ready-container {
+    display: block;
+    position: absolute;
+    width: 460px;
+    height: 202px;
+    border: 1px solid #0000001A;
+    border-radius: 12px;
+    background: #FFFFFF;
+    padding: 32px;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .twbb-tf-wesite-ready-title {
+      display: inline-block;
+      font-family: 'Evergrow-Sans', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: #000000;
+      margin-bottom: 10px;
+      background: url("../images/tada.svg") no-repeat right center;
+      background-size: 40px;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+    .twbb-tf-wesite-ready-description {
+      display: block;
+      font-family: 'Evergrow-Sans', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: rgba(0,0,0,0.8);
+      margin-bottom: 32px;
+    }
+    .twbb-tf-wesite-ready-button {
+      display: block;
+      background: #000000;
+      color: #ffffff;
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+  }
+}

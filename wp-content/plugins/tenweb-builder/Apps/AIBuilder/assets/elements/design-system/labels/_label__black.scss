@@ -1,0 +1,16 @@
+@use "../variables/palette" as *;
+@use "./label" as *;
+
+
+.ds-label-black {
+  @extend .ds-label;
+
+  background: $black;
+}
+
+.ds-label-violet {
+  @extend .ds-label;
+
+  background: rgba($baby-purple, 0.1);
+  color: $purple-blue;
+}

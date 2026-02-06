@@ -1,0 +1,11 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+
+@each $abbr, $name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
+  @for $i from 0 through 25 {
+    .p#{$abbr}#{$i} {
+      padding-#{$name}: 1px * $i !important;
+    }
+  }
+}

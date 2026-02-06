@@ -1,0 +1,7 @@
+@use "responsive" as *;
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+
+
+.ds-hide {display: none !important;}  .ds-hide-mobile{@include screen-mobile{display: none !important}} .ds-hide-desktop{@include screen-desktop{display: none !important;}}

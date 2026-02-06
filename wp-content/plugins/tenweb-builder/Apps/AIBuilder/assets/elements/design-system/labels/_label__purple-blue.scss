@@ -1,0 +1,16 @@
+@use "../mixins/font" as *;
+@use "../variables/palette" as *;
+@use "./label" as *;
+
+
+.ds-label-purple-blue {
+  @extend .ds-label;
+
+  height: 30px!important;
+  padding: 8px 15px;
+  background: $purple-blue;
+
+  span {
+    @include font(12px, 600, 18px);
+  }
+}

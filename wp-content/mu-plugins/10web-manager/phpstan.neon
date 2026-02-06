@@ -1,0 +1,33 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 5
+    paths:
+        - ./includes
+        - ./mu
+        - ./config.php
+        - ./10web-manager.php
+        - ./manager.php
+    treatPhpDocTypesAsCertain: false
+    bootstrapFiles:
+        - ./vendor/autoload.php
+    ignoreErrors:
+        - '#Path in include_once.* is not a file or it does not exist#'
+        - '#Path in require_once.*"env.php" is not a file or it does not exist.#'
+        - '#Constant .* not found.#'
+        - '#Right side of && is always true.#'
+        - '#.* is never read, only written.#'
+        - '#Loose comparison using == between .* will always evaluate to false.#'
+        - '#Path in require_once.* ".\/wp-admin\/includes\/.*#'
+        - '#Instantiated class Tenweb_Builder\\Import not found.#'
+        - '#Call to method .* on an unknown class Tenweb_Builder\\Import.#'
+        - '#Strict comparison using === between .* will always evaluate to true.#'
+        - '#Result of \|\| is always false.#'
+        - '#is_wp_error\(WP_Error\) will always evaluate to true.#'
+        - '#Negated boolean expression is always false.#'
+        - '#Result of && is always false.#'
+        - '#Call to static method .* on an unknown class WP_CLI.#'
+    excludePaths:
+        - ./includes/*-old.php

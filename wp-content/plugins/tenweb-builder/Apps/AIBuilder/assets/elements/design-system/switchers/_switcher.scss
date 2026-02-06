@@ -1,0 +1,55 @@
+@use "palette" as *;
+@use "flex" as *;
+@use "font" as *;
+
+
+$toggle-width: 60px;
+$toggle-height: 34px;
+$toggle-gutter: 5px;
+
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+
+.ds-switcher {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.ds-switcher + label {
+  @include flex(inline-flex, center, stretch);
+  gap: 15px;
+  position: relative;
+  cursor: pointer;
+  @include font(14px, 600, 20px);
+}
+
+.ds-switcher.ds-switcher-double + label.ds-switcher-control {
+  background-color: $fun-blue;
+}
+
+.ds-switcher:checked+label .ds-switcher-control {
+  background-color: $fun-blue;
+  &:after {
+    transform: translateX($toggle-width - $toggle-control-size - 2 * $toggle-gutter);
+  }
+}
+
+.ds-switcher:disabled+label, .ds-switcher.ds-switcher-disabled+label {
+  pointer-events: none;
+  opacity: 0.5;
+  .ds-switcher-control:after {
+    background: rgba($white, 0.5);
+  }
+}
+
+/* usage
+<div>
+  <input class="ds-switcher ds-switcher-double ds-control-small" type="checkbox" id="id">
+  <label for="id">
+    label
+    <span class="ds-switcher-control"></span>
+    label
+  </label>
+</div>
+ */

@@ -1,0 +1,22 @@
+div.form-field{height: 50px;}
+#twwp-card-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 10px;
+}
+#twwp-card-form .form-field#cc-name,
+#twwp-card-form .form-field#cc-number {
+  flex: 1 0 100%;
+}
+#twwp-card-form .form-field#cc-expiration-date,
+#twwp-card-form .form-field#cc-cvc {
+  flex: 0 0 calc(50% - 5px);
+}
+.form-field iframe {
+  width: 100%;
+  max-height: 100%;
+}
+/* A trick to have working 3DS pop-up when the form is blocked. */
+form[target="threeDSMethodIframe"]+div {
+  z-index: 999999;
+}

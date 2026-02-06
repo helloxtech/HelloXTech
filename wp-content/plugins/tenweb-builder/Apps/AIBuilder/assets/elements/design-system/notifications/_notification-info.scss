@@ -1,0 +1,23 @@
+@use "../variables/palette" as *;
+@use "../mixins/font" as *;
+@use "./notification" as *;
+
+
+.ds-notification-info {
+  @extend .ds-notification;
+  background: rgba($fun-blue, 0.1);
+
+  &.small {
+    border: 1px solid rgba($fun-blue, 0.1);
+  }
+
+  & > div {
+    i {
+      color: $fun-blue;
+    }
+  }
+
+  p, span {
+    @include font(12px, 500, 18px);
+  }
+}

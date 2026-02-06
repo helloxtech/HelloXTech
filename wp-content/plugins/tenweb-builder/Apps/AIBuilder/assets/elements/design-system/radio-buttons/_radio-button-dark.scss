@@ -1,0 +1,27 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/font" as *;
+
+
+.ds-radio-dark + label {
+  height: 18px;
+  @include font(12px, 400, 18px);
+
+  &:before {
+    background: $black;
+    position: relative;
+    border: 1px solid $eggshell;
+  }
+  &:not(:disabled):not(:checked)+label:hover:before {
+    border-color: $eggshell!important;
+  }
+}
+.ds-radio-dark {
+  &:not(:disabled):not(:checked)+label:hover:before {
+    border-color: $eggshell;
+  }
+  &:checked + label:after {
+    width: 10px;
+    height: 10px;
+    background: $white;
+  }
+}

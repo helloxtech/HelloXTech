@@ -1,0 +1,28 @@
+@use "responsive" as *;
+@use "../variables/palette" as *;
+@use "./notification" as *;
+
+
+.ds-notification-error {
+  @extend .ds-notification;
+  background: rgba($red-orange, 0.1);
+
+  &.small {
+    border: 1px solid rgba($red-orange, 0.1);
+  }
+
+  & > div {
+    &.text-center {
+      align-items: center;
+      justify-content: center;
+
+      @include screen-mobile {
+        align-items: stretch;
+      }
+    }
+
+    i {
+      color: $red-orange;
+    }
+  }
+}

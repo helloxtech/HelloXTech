@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_54405" data-name="Rectangle 54405" width="55" height="55" rx="6" transform="translate(690 307)" fill="rgba(255,255,255,0.05)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_95698" data-name="Mask Group 95698" transform="translate(-690 -307)" clip-path="url(#clip-path)">
+    <g id="Group_173091" data-name="Group 173091" transform="translate(0 -20)">
+      <rect id="Rectangle_54488" data-name="Rectangle 54488" width="30" height="22" rx="3" transform="translate(703 346)" fill="#fff"/>
+      <rect id="Rectangle_54490" data-name="Rectangle 54490" width="28" height="22" rx="3" transform="translate(736 346)" fill="#515352"/>
+      <rect id="Rectangle_54493" data-name="Rectangle 54493" width="28" height="22" rx="3" transform="translate(672 346)" fill="#515352"/>
+      <rect id="Rectangle_54489" data-name="Rectangle 54489" width="25.495" height="17.37" rx="1" transform="translate(705.252 348.5)" fill="#171919"/>
+      <rect id="Rectangle_54495" data-name="Rectangle 54495" width="23" height="17.37" rx="1" transform="translate(674.5 348.5)" fill="#171919"/>
+      <rect id="Rectangle_54494" data-name="Rectangle 54494" width="23" height="17.37" rx="1" transform="translate(738.5 348.5)" fill="#171919"/>
+    </g>
+  </g>
+</svg>

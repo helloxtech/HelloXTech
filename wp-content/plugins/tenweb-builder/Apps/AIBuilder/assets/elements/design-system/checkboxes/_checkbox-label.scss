@@ -1,0 +1,11 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+@use "../mixins/font" as *;
+
+
+.ds-checkbox-label {
+  display: block;
+  @include font(14px, 600, 20px);
+  margin-bottom: 10px;
+}

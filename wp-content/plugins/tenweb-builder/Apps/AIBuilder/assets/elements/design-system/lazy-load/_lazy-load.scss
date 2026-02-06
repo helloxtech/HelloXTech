@@ -1,0 +1,102 @@
+@use "../variables/palette" as *;
+
+.ds-lazy-load {
+  position: relative;
+  overflow: hidden;
+  border: 0 !important;
+  background: $alabaster !important;
+  border-radius: 6px;
+
+  > * {
+    visibility: hidden;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: $alabaster;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba($mercury, 0.5) 30%, rgba($white, 0.5) 38%, rgba($white, 0.6) 41%, rgba($mercury, 0.6) 50%, rgba($mercury, 0.6) 80%);
+    background-size: 1200% 1200%;
+    text-indent: -9999px;
+
+    -webkit-animation: AnimationName 2.5s ease infinite reverse;
+    -moz-animation: AnimationName 2.5s ease infinite reverse;
+    animation: AnimationName 2.5s ease infinite reverse;
+  }
+
+  &.dark {
+    background: #0B0D0D !important;
+
+    &:after {
+      background: linear-gradient(90deg, #0B0D0D 30%, rgba($white, 0.5) 38%, rgba($white, 0.6) 41%, #0B0D0D 50%, #0B0D0D 80%);
+      background-size: 1200% 1200%;
+      text-indent: -9999px;
+
+      -webkit-animation: AnimationName 2.5s ease infinite reverse;
+      -moz-animation: AnimationName 2.5s ease infinite reverse;
+      animation: AnimationName 2.5s ease infinite reverse;
+    }
+  }
+
+  &.mild-dark {
+
+    &:after {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.03) 50%, rgba(0, 0, 0, 0.5) 100%);
+      background-size: 1200% 1200%;
+      text-indent: -9999px;
+
+      -webkit-animation: AnimationName 2.5s ease infinite reverse;
+      -moz-animation: AnimationName 2.5s ease infinite reverse;
+      animation: AnimationName 2.5s ease infinite reverse;
+    }
+  }
+}
+
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%
+  }
+  50% {
+    background-position: 100% 9%
+  }
+  100% {
+    background-position: 0% 92%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%
+  }
+  50% {
+    background-position: 100% 9%
+  }
+  100% {
+    background-position: 0% 92%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 92%
+  }
+  100% {
+    background-position: 100% 9%
+  }
+  /*     100%{background-position:0% 92%} */
+}

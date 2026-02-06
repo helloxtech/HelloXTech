@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_48069" data-name="Rectangle 48069" width="8" height="8" fill="#2a2f30"/>
+    </clipPath>
+  </defs>
+  <g id="Group_172399" data-name="Group 172399" transform="translate(-271 -226)">
+    <g id="elipse" transform="translate(271 226)" fill="#fff" stroke="rgba(33,96,181,0.1)" stroke-width="1">
+      <rect width="18" height="18" rx="9" stroke="none"/>
+      <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" fill="none"/>
+    </g>
+    <rect id="elipse-2" data-name="elipse" width="14" height="14" rx="7" transform="translate(273 228)" fill="rgba(33,96,181,0.05)"/>
+    <g id="Checkmark_Icon" transform="translate(276 231)">
+      <g id="Mask_Group_1297" data-name="Mask Group 1297" clip-path="url(#clip-path)">
+        <path id="design_system_icons-29" data-name="design system icons-29" d="M20.609,17.544a.428.428,0,0,0-.663,0L17.7,19.85a.375.375,0,0,1-.229.1.273.273,0,0,1-.229-.1L16.225,18.8a.386.386,0,0,0-.331-.131.477.477,0,0,0-.331.131.5.5,0,0,0,0,.681l1.58,1.625a.529.529,0,0,0,.331.131.477.477,0,0,0,.331-.131l2.8-2.882A.456.456,0,0,0,20.609,17.544Z" transform="translate(-14.095 -15.164)" fill="#2a2f30"/>
+      </g>
+    </g>
+  </g>
+</svg>

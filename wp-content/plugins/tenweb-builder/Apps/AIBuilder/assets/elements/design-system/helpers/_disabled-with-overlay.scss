@@ -1,0 +1,17 @@
+@use "../variables/palette" as *;
+
+
+.disabled-with-overlay {
+  pointer-events: none;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($alabaster, 0.5);
+    z-index: 12;
+  }
+}

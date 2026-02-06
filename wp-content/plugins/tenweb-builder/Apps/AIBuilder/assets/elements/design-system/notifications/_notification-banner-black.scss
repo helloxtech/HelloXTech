@@ -1,0 +1,10 @@
+@use "../variables/palette" as *;
+@use "./notification" as *;
+
+
+.ds-notification-banner-black {
+  @extend .ds-notification;
+  border-radius: 6px;
+  background: $black;
+  color: $white;
+}

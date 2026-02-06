@@ -1,0 +1,22 @@
+@use "../variables/palette" as *;
+@use "../mixins/flex" as *;
+@use "./notification" as *;
+
+
+.ds-notification-black {
+  @extend .ds-notification;
+  background: $black;
+  min-height: 50px;
+  box-sizing: border-box;
+  @include flex(flex, center, center);
+
+  p {
+    color: $white;
+  }
+
+  & > div {
+    i {
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "./input" as *;
+
+.ds-input-card {
+  @extend .ds-input;
+  padding: 0 0 0 58px;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 26px;
+  background-image: url(~assets/images/icons/checkout_card.svg);
+  position: relative;
+
+  &.maestro {
+    background-image: url(~assets/images/logos/payment/maestro.svg);
+  }
+
+  &.mastercard {
+    background-image: url(~assets/images/logos/payment/mastercard.svg);
+  }
+
+  &.visa {
+    background-image: url(~assets/images/logos/payment/visa.svg);
+  }
+
+  &.amex {
+    background-image: url(~assets/images/logos/payment/amex.svg);
+  }
+
+  &.discover {
+    background-image: url(~assets/images/logos/payment/discover.svg);
+  }
+
+  &.diners {
+    background-image: url(~assets/images/logos/payment/diners_club.svg);
+  }
+
+  &.jcb {
+    background-image: url(~assets/images/logos/payment/jcb.svg);
+  }
+
+  &.unionpay {
+    background-image: url(~assets/images/logos/payment/union_pay.svg);
+  }
+
+  &.StripeElement--focus {
+    box-shadow: none !important;
+    border-color: $black;
+  }
+
+  &.StripeElement--invalid {
+    border-color: $red-orange;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+    box-sizing: border-box;
+    border-left: 1px solid $eggshell;
+    height: 18px;
+  }
+}

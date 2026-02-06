@@ -1,0 +1,34 @@
+@use "../variables/palette" as *;
+@use "./button" as *;
+
+
+.ds-btn-purple-blue {
+  @extend .ds-btn;
+  background-color: $purple-blue;
+  color: $white;
+
+  span {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: rgba($purple-blue, 0.8);
+  }
+
+  &.static {
+    &:hover {
+      background-color: $purple-blue;
+    }
+  }
+
+  &:disabled, &.ds-btn-disabled {
+    pointer-events: none;
+    background-color: rgba($purple-blue, 0.5);
+    color: rgba($white, 0.5);
+  }
+
+  &.ds-btn-loading {
+    background-color: rgba($purple-blue, 0.5);
+    color: $white;
+  }
+}

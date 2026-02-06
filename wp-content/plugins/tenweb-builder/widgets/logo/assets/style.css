@@ -1,0 +1,38 @@
+.twbb-logo {
+  display: flex;
+  width: max-content;
+}
+
+/* Logo Responsive Visibility Styles */
+.twbb-logo__image {
+  display: none;
+}
+
+.twbb-logo__text {
+  display: none;
+}
+
+body[data-elementor-device-mode=desktop] .twbb-logo-yes .twbb-logo__image {
+  display: block;
+}
+body[data-elementor-device-mode=desktop] .twbb-logo-text-yes .twbb-logo__text {
+  display: block;
+}
+
+/* Tablet */
+body[data-elementor-device-mode=tablet] .twbb-logo-tablet-yes .twbb-logo__image {
+  display: block;
+}
+body[data-elementor-device-mode=tablet] .twbb-logo-text-tablet-yes .twbb-logo__text {
+  display: block;
+}
+
+/* Mobile */
+body[data-elementor-device-mode=mobile] .twbb-logo-mobile-yes .twbb-logo__image {
+  display: block;
+}
+body[data-elementor-device-mode=mobile] .twbb-logo-text-mobile-yes .twbb-logo__text {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

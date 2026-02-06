@@ -1,0 +1,85 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/font" as *;
+
+.ds-input-wrap {
+  position: relative;
+  padding-bottom: 21px;
+
+  &.static {
+    position: static;
+    padding-bottom: 0;
+    .ds-input-desc, .ds-input-error-msg {
+      position: static;
+    }
+  }
+  .ds-input-label {
+    font-weight: 500!important;
+  }
+  &.has-payment-methods {
+    margin-top: 20px;
+  }
+}
+
+.ds-input {
+  height: 40px;
+  width: 100%;
+  max-width: 100%;
+  background: $white;
+  border: 1px solid rgba($sonic-silver, 0.16);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 8px 14px;
+  @include font(12px, 400, 18px);
+  color: $black;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &::placeholder {
+    @include font(12px, 400, 18px);
+    color: rgba($black, 0.5);
+  }
+
+  &:focus, &:active, &:focus-visible {
+    outline: 0;
+    border-color: $black;
+  }
+
+  &-black {
+    @extend .ds-input;
+    &:focus, &:active, &:focus-visible {
+      border-color: $black;
+    }
+  }
+
+  &-blue {
+    @extend .ds-input;
+    &:focus, &:active, &:focus-visible {
+      border-color: $purple-blue;
+    }
+  }
+
+  &:disabled, &.disabled {
+    pointer-events: none;
+    background: $grams-hair;
+    border: 1px solid $eggshell;
+    color: rgba($black, 0.2);
+  }
+
+  &.error {
+    border-color: $red-orange;
+  }
+}
+
+/* usage
+
+<div class="ds-input-wrap">
+  <span class="ds-input-label">Label</span>
+  <input type="text" class="ds-input error" placeholder="placeholder">
+  <span class="ds-input-desc">description</span>
+  <span class="ds-input-error-msg">error</span>
+</div>
+
+ */

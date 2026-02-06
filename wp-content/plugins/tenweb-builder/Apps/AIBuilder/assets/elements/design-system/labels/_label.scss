@@ -1,0 +1,37 @@
+@use "../variables/palette" as *;
+@use "../mixins/font" as *;
+@use "../mixins/flex" as *;
+
+
+.ds-label {
+  @include flex(inline-flex, center, center);
+
+  height: 32px;
+  box-sizing: border-box;
+
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 8px;
+
+  text-transform: capitalize;
+  text-align: center;
+  vertical-align: middle;
+
+  background: $forest-green;
+  color: $white;
+
+  cursor: pointer;
+
+  span {
+    @include font(14px, 600, 20px);
+    @include flex(inline-flex, center, center);
+    gap: 6px;
+    i {
+      font-size: 20px;
+    }
+
+    img {
+      height: 20px; width: 20px;
+    }
+  }
+}

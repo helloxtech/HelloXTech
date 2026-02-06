@@ -1,0 +1,18 @@
+@use "../variables/palette" as *;
+@use "./notification" as *;
+
+
+.ds-notification-success {
+  @extend .ds-notification;
+  background: rgba($forest-green, 0.1);
+
+  &.small {
+    border: 1px solid rgba($forest-green, 0.1);
+  }
+
+  & > div {
+    i {
+      color: $forest-green;
+    }
+  }
+}

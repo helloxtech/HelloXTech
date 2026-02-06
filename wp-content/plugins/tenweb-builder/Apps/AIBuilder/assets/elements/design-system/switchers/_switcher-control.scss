@@ -1,0 +1,36 @@
+@use "palette" as *;
+
+
+$toggle-width: 60px;
+$toggle-height: 34px;
+$toggle-gutter: 5px;
+$toggle-control-speed: .1s;
+$toggle-control-ease: ease-in;
+
+$toggle-radius: calc($toggle-height / 2);
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+.ds-switcher-control {
+  position: relative;
+  content: "";
+  height: $toggle-height;
+  width: $toggle-width;
+  border-radius: $toggle-radius;
+  background-color: rgba($black, 0.1);
+  transition: background-color $toggle-control-speed $toggle-control-ease;
+  &:after {
+    content: "";
+    position: absolute;
+    left: $toggle-gutter;
+    top: $toggle-gutter;
+    width: $toggle-control-size;
+    height: $toggle-control-size;
+    border-radius: $toggle-radius;
+    background: $white;
+    transition: transform $toggle-control-speed $toggle-control-ease;
+  }
+}
+
+.ds-switcher.ds-switcher-double + label > .ds-switcher-control {
+  background-color: $fun-blue;
+}

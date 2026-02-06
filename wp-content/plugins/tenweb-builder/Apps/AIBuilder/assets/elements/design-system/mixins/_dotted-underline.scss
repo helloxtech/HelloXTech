@@ -1,0 +1,8 @@
+@mixin dotted-underline {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 12%; // 1.68px
+  text-underline-offset: 30%; // 4.2px
+  text-underline-position: from-font;
+}

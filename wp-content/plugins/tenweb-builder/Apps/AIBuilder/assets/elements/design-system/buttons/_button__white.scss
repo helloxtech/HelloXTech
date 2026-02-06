@@ -1,0 +1,24 @@
+@use "../variables/palette" as *;
+@use "./button" as *;
+
+
+.ds-btn-white {
+  @extend .ds-btn;
+  background-color: $white;
+  color: $black;
+
+  &:hover {
+    background-color: rgba($white, 0.8);
+  }
+
+  &:disabled, &.ds-btn-disabled {
+    pointer-events: none;
+    background-color: rgba($white, 0.5);
+    color: rgba($black, 0.5);
+  }
+
+  &.ds-btn-loading {
+    background-color: rgba($white, 0.5);
+    color: $black;
+  }
+}

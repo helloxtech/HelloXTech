@@ -1,0 +1,80 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/flex" as *;
+@use "../mixins/font" as *;
+
+
+.ds-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.ds-radio+label {
+  position: relative;
+  height: 20px;
+  @include flex(inline-flex, center, flex-start);
+  gap: 8px;
+  cursor: pointer;
+  @include font(14px, 400, 20px);
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 14px; height: 14px;
+    flex-shrink: 0; flex-grow: 0;
+    border: 1px solid rgba($black, 0.2);
+    border-radius: 50%;
+    background-color: $white;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &.big {
+    &:before {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.ds-radio:checked+label:after {
+  content: '';
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background-color: $fun-blue;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(2px, 4px);
+  box-sizing: border-box;
+}
+
+.ds-radio:checked+label.big:after {
+  width: 10px;
+  height: 10px;
+  transform: translate(3px, 5px);
+}
+
+.ds-radio:not(:disabled):not(:checked)+label:hover:before {
+  border-color: $fun-blue;
+}
+
+.ds-checkbox:not(:disabled):not(:checked)+label:hover:before {
+  border-color: $fun-blue;
+}
+
+.ds-radio:disabled+label, .ds-radio.ds-radio-disabled+label {
+  pointer-events: none;
+  color: rgba($black, 0.5);
+}
+
+.ds-radio:disabled+label:after, .ds-radio.ds-radio-disabled+label:after {
+  background-color: rgba($black, 0.2);
+}
+
+/* usage
+<div>
+  <p class="ds-radio-label">Label</p>
+  <input class="ds-radio ds-radio-disabled" type="radio" id="id1" value="1" name="radio">
+  <label for="id1">text</label>
+</div>
+ */

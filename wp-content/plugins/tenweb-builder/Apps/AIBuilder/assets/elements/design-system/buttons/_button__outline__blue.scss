@@ -1,0 +1,29 @@
+@use "../variables/palette" as *;
+@use "./button__outline" as *;
+
+
+.ds-btn-outline-blue {
+  @extend .ds-btn-outline;
+  color: $fun-blue;
+  border-color: $fun-blue;
+
+  &:hover {
+    background-color: $fun-blue;
+    color: $white;
+  }
+
+  &:disabled, &.ds-btn-disabled, &.ds-btn-loading {
+    background-color: rgba($white, 0.5);
+    color: rgba($fun-blue, 0.5);
+    border-color: rgba($fun-blue, 0.5);
+  }
+
+  &.ds-btn-loading {
+    background-color: rgba($fun-blue, 0.5);
+    color: $white;
+    &.ds-btn-icon {
+      padding: 10px;
+      border: none;
+    }
+  }
+}

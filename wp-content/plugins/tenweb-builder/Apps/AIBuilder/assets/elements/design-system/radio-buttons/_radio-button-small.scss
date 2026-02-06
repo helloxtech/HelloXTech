@@ -1,0 +1,15 @@
+@use "palette" as *;
+@use "font" as *;
+@use "flex" as *;
+@use "../mixins/_font" as *;
+
+
+.ds-radio-small+label {
+  height: 18px;
+  @include font(12px, 400, 18px);
+}
+
+.ds-radio-small:checked+label:after {
+  width: 10px; height: 10px;
+  top: 11px !important;
+}

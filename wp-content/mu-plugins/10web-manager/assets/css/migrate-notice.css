@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+.tenweb-after-migrate {padding: 0px !important; display: block !important;}
+.tenweb-after-migrate * {box-sizing: border-box}
+.tenweb-after-migrate-notice {display: flex; position: relative;}
+.tenweb-info {display: block; width:30%;  border-right: 1px solid #323A4533; text-align: center; padding: 15px 15px;
+    background: #F9F9F9 0% 0% no-repeat padding-box; }
+.tenweb-logo {display:block; line-height:20px; padding: 0px 15px}
+.tenweb-logo img {height:20px; margin: 15px auto;  max-width: 100% }
+.tenweb-info h4 {max-width: 266px; text-align: center; margin:20px auto;letter-spacing: 0px;color: #242931;
+    font: normal normal 800 14px/24px 'Open Sans', sans-serif}
+.tenweb-info p, .tenweb-info a {margin:0px; text-align: center;
+    font: normal normal 600 12px/17px 'Open Sans', sans-serif;
+    letter-spacing: 0.1px;color: #323A45;opacity: 1;}
+.tenweb-info a.open-ext img {
+    position: relative; top: 3px; left: 5px;
+}
+.tenweb-info  .info-head {text-align: center;
+    font: normal normal 600 12px/17px 'Open Sans', sans-serif;
+    letter-spacing: 0.1px;color: #323A45;opacity: 0.5;margin:15px 0px 0px 0px;}
+.tenweb-info-divider {margin:25px auto}
+.tenweb-google-partner {max-width: 132px; margin:20px auto 10px auto;
+    box-shadow: 0px 0px 20px #0000001A;}
+.tenweb-scores {display: block; width:70%; text-align: center }
+.tenweb-scores h1 {margin: 25px auto; letter-spacing: 0px;color: #242931; opacity: 1;
+    font: normal normal 800 14px/18px 'Open Sans', sans-serif}
+.tenweb-scores .scores-info {display: flex;background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #323A4533;border-radius: 6px;
+    opacity: 1;max-width: 70%;margin:15px auto}
+.tenweb-info hr, .tenweb-scores .scores-info hr {
+    border: 0px; background: #0000000D; height: 1px;
+}
+.tenweb-scores .scores-info .old-score,
+.tenweb-scores .scores-info .new-score  {width:50%; padding:5px 0px; margin-bottom: 0px}
+.tenweb-scores .scores-info .old-score {border-right: 1px solid #0000000D;}
+.tenweb-scores .scores-info .score-item {background: #FD3C311A 0% 0% no-repeat padding-box;
+    border: 1px solid #FD3C3133;border-radius: 6px;opacity: 1;height: 25px;
+    line-height: 25px;max-width:245px;margin:15px auto 5px auto}
+.tenweb-scores .scores-info .score-item.tenweb_gray {background: #323A4533}
+.tenweb-scores .scores-info .score-item.tenweb_green {background: #22B33933 0% 0% no-repeat padding-box;}
+.tenweb-scores .scores-info .score-item .score-data {font: normal normal bold 14px/18px Open Sans;}
+.tenweb-scores .scores-info .score-item span {font: normal normal bold 14px/18px 'Open Sans', sans-serif
+    letter-spacing: 0px;color: #323A45;opacity: 1;margin-right:10px}
+.tenweb-scores .scores-info .new-score .score-item {background: #22B33933 0% 0% no-repeat padding-box}
+.tenweb-scores .scores-info  .score-item img {float: left; margin:5px}
+a.tenweb-explore {display:block; width: 180px;height: 40px;line-height:40px;text-decoration: none;
+    background: #2160B5 0% 0% no-repeat padding-box;
+    border-radius: 25px;opacity: 1;margin:15px auto;text-align: center;
+    font: normal normal 600 14px/40px 'Open Sans', sans-serif;
+    letter-spacing: 0.12px;color: #FFFFFF;opacity: 1;}
+.tenweb-after-migrate-dismissed {position:absolute; right:15px; top:15px; }
+
+
+@media only screen and (max-width: 1280px) {
+    .tenweb-scores .scores-info {
+        max-width: 90%;
+    }
+
+    .tenweb-scores .scores-info .score-item {
+        max-width: 189px;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 667px) {
+    .tenweb-after-migrate-notice {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .tenweb-scores {
+        width: 100%;
+    }
+    .tenweb-info {
+        width: 100%;
+        border-bottom: 1px solid #323A4533;
+    }
+
+    .tenweb-scores .scores-info {
+        max-width: 270px;
+    }
+
+    .scores-info h4 {
+        font: normal normal bold 11px/18px Open Sans;
+    }
+    .scores-info h4 span {display: none}
+
+    .tenweb-scores .scores-info .score-item {height:46px; max-width: 80%; position: relative;}
+    .tenweb-scores .scores-info .score-item .score-type {display: block; font: normal normal normal 11px/14px Open Sans;}
+    .tenweb-scores .scores-info .score-item .score-data {font: normal normal bold 14px/18px Open Sans;}
+    .tenweb-scores .scores-info .score-item span {margin-right:0px}
+    .tenweb-scores .scores-info .score-item img {
+        position: absolute; left: 6px; top: 6px; margin:0px
+    }
+    .tenweb-after-migrate-dismissed {right:10px; top:10px;}
+}

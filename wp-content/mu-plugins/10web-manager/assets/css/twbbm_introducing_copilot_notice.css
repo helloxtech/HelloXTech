@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.twbbm_introducing_copilot_notice_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    margin: 0px !important;
+    padding: 0px !important;
+    position: relative;
+    width: 100%;
+}
+.twbbm_introducing_copilot_notice{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.twbbm_introducing_copilot_notice_data{
+    padding: 20px 24px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.twbbm_introducing_copilot_notice_info{
+    width: 640px;
+}
+
+.twbbm_introducing_copilot_notice img{
+    height: 166px;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_title{
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    padding: 0px;
+    margin: 0px 0px 8px 0px;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_desc{
+    color: rgba(0, 0, 0, 0.80);
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    padding: 0px;
+    margin: 0px 0px 16px 0px;
+    width: 505px;
+}
+.twbbm_introducing_copilot_notice_container .wbbm_introducing_actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_plugins_list{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    margin: 0px;
+    padding: 0px;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_plugins_list li{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_plugins_list li:before{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/CoPilot/check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_button{
+    display: flex;
+    border-radius: 6px;
+    background: #3339F1;
+    width: 200px;
+    height: 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin: 0px;
+}
+.twbbm_introducing_copilot_notice_container .twbbm_introducing_button_text{
+    color: #FFF;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.twbbm_introducing_copilot_notice_close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+}
+.twbbm_introducing_button:not(.twbbm_introducing_button_loading):not(.twbbm_introducing_button_success):hover {
+    opacity: 0.8;
+}
+
+.twbbm_introducing_button.twbbm_introducing_button_loading{
+    opacity: 0.5;
+    cursor: default;
+    position: relative;
+}
+.twbbm_introducing_button.twbbm_introducing_button_loading:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-image: url("../images/CoPilot/introducing_button_loading.svg");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+    animation: twbbm_rotateBg 2s linear infinite;
+}
+.twbbm_introducing_button.twbbm_introducing_button_success:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/CoPilot/introducing_button_success.svg");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+}
+@keyframes twbbm_rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.twbbm_introducing_button_loading .twbbm_introducing_button_text, .twbbm_introducing_button_success .twbbm_introducing_button_text{
+    display: none;
+}
+
+
+
+@media (max-width: 1215px) {
+    .twbbm_introducing_copilot_notice_data{
+        padding: 20px 20px 20px 20px;
+    }
+    .twbbm_introducing_copilot_notice_info{
+        width: 441px;
+    }
+    .twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_title{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_desc{
+        margin: 0px 0px 20px 0px;
+    }
+    .twbbm_introducing_copilot_notice img{
+        height: 186px;
+    }
+}
+@media (max-width: 1070px) {
+    .twbbm_introducing_copilot_notice img{
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .twbbm_introducing_copilot_notice img{
+        display: none;
+    }
+    .twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_desc{
+        width: 100%;
+    }
+    .twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_title{
+        width: 100%;
+    }
+    .twbbm_introducing_copilot_notice_container .twbbm_introducing_copilot_notice_desc{
+        margin: 0px 0px 16px 0px;
+    }
+    .twbbm_introducing_copilot_notice_info{
+        width: 100%;
+    }
+    .twbbm_introducing_copilot_notice_container .wbbm_introducing_actions {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .twbbm_introducing_copilot_notice_container .twbbm_introducing_button{
+        width: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+@use "../variables/palette" as *;
+@use "./button" as *;
+
+
+.ds-btn-square {
+  @extend .ds-btn;
+  width: 110px;
+  border: 1px solid rgba($black, 0.25);
+  border-radius: 6px;
+  padding: 9px 23px;
+  color: $black;
+
+  &.small-square {
+    width: 40px;
+  }
+
+  &:disabled, &.ds-btn-disabled, &.ds-btn-loading {
+    color: rgba($black, 0.5);
+    border-color: rgba($black, 0.5);
+  }
+
+  &.ds-btn-loading {
+    border-color: rgba($black, 0.5);
+    pointer-events: none;
+  }
+
+  &.ds-btn-icon {
+    width: 40px;
+    padding: 9px;
+    color: rgba($black, 0.5);
+    &:hover {
+      color: rgba($black, 1);
+    }
+  }
+}

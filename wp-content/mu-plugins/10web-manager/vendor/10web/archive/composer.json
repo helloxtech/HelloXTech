@@ -1,0 +1,23 @@
+{
+    "name": "10web/archive",
+    "description": "Archivator for creating zip and tar archives for php",
+    "type": "library",
+    "require": {
+        "php": ">=5.6",
+        "pear/archive_tar": "1.4.*",
+        "nelexa/zip": "3.3.*"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Araqel Araqelyan",
+            "email": "AraqelAraqelyan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Araqel\\Archive\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

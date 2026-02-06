@@ -1,0 +1,49 @@
+@use "../mixins/flex" as *;
+@use "../mixins/font" as *;
+@use "../../../assets/design-system/variables/palette" as *;
+
+
+
+.ds-number-input-wrap {
+  position: relative;
+}
+
+.ds-input-number-spin-buttons-wrap {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  height: calc(100% - 16px);
+  width: 28px;
+  border-left: 1px solid rgba($black, 0.05);
+  @include flex(flex, center, space-between, column);
+  button {
+    all: unset;
+    color: rgba($black, 0.5);
+    cursor: pointer;
+    @include font(11px, 400, 11px);
+    &:hover {
+      color: $black;
+    }
+    &:after {
+      font-family: 'db-icons' !important;
+      content: '\e99c';
+      display: block;
+    }
+    &:nth-child(2):after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/* usage
+
+<div class="ds-number-input-wrap">
+  <span class="ds-input-label">Label</span>
+  <input type="number" min="1" max="100" class="ds-input" #numberInput>
+      <div class="ds-input-number-spin-buttons-wrap">
+        <button type="button" (click)="numberInput.stepUp(1)">▲</button>
+        <button type="button" (click)="numberInput.stepDown(1)">▼</button>
+      </div>
+</div>
+
+ */

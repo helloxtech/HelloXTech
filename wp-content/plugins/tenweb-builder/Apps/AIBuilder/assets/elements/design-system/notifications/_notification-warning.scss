@@ -1,0 +1,27 @@
+@use "../variables/palette" as *;
+@use "./notification" as *;
+
+
+.ds-notification-warning {
+  @extend .ds-notification;
+  background: rgba($saffron, 0.1);
+
+  &.small {
+    border: 1px solid rgba($saffron, 0.1);
+  }
+
+  & > div {
+    i {
+      color: $saffron;
+    }
+  }
+  &.pink {
+    background: rgba(253, 243, 244, 1);
+
+    & > div {
+      i {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

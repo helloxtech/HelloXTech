@@ -1,0 +1,43 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../mixins/font" as *;
+
+
+.ds-link {
+  color: $black;
+  cursor: pointer;
+  @include font(12px, 500, 18px);
+
+  &-white {
+    @extend .ds-link;
+    color: $white;
+  }
+
+  &-black {
+    @extend .ds-link;
+    color: $black;
+  }
+
+  &-blue {
+    @extend .ds-link;
+    color: $fun-blue;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &-blue {
+    @extend .ds-link;
+    color: $fun-blue;
+  }
+
+  &.initial {
+    font-size: initial;
+    line-height: initial;
+  }
+
+  &.unset-size {
+    font-size: unset;
+    line-height: initial;
+  }
+}

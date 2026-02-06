@@ -1,0 +1,24 @@
+@use "palette" as *;
+@use "./switcher" as *;
+@use "./switcher-small" as *;
+
+
+.ds-switcher-black {
+  @extend .ds-switcher;
+}
+
+.ds-switcher-black + label > .ds-switcher-control {
+  background-color: $iron-btn;
+}
+
+.ds-switcher-black + label.ds-switcher-control {
+  background-color: $iron-btn;
+}
+
+.ds-switcher-black + label.db-button_disabled {
+  border-radius: 10px;
+}
+
+.ds-switcher-black:checked + label .ds-switcher-control {
+  background-color: $black;
+}

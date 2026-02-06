@@ -1,0 +1,27 @@
+@use "../variables/palette" as *;
+@use "./notification" as *;
+
+
+.ds-notification-gray {
+  @extend .ds-notification;
+  background: rgba($black, 0.05);
+  min-height: 36px;
+  box-sizing: border-box;
+
+  &.with-radius {
+    border-radius: 6px;
+  }
+  p {
+    color: $black;
+  }
+
+  & > div {
+    i {
+      color: $black;
+
+      &.yellow {
+        color: $saffron;
+      }
+    }
+  }
+}

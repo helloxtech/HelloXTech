@@ -1,0 +1,22 @@
+.tww_elementor_popup_iframe {
+    position: absolute;
+    top:0px;
+    width: 100%;
+    height: 100%;
+}
+.tww_control_filter{
+    position: relative;
+}
+.tww_elementor_edit_filter{
+    display: block;
+    right: 24px;
+    top: 33px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    text-decoration: underline;
+    font-style: italic;
+}
+.tww_filter_button_text{
+    margin-top:12px;
+}

@@ -1,0 +1,53 @@
+.tw_wl_banner {
+    font-family: 'Open Sans', sans-serif;
+    color: #323A45;
+    padding: 20px 20px 20px 0;
+}
+
+.tw_wl_banner > div {
+    display: flex;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px #E5E6E8CC;
+    padding: 20px 20px 20px 15px;
+}
+.tw_wl_banner img {
+    width: 42px;
+    height: 40px;
+    margin: -7px 2px 0 0;
+}
+.tw_wl_banner h1 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+}
+.tw_wl_banner p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 3px 0 0 0;
+    margin: 0;
+}
+@media screen and (max-width: 767px) {
+    .tw_wl_banner {
+        padding: 66px 20px 20px 10px;
+    }
+    .tw_wl_banner img {
+        width: 30px;
+        height: 28px;
+        padding: 3px 4px 0 0;
+    }
+    .tw_wl_banner h1 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .tw_wl_banner p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+#tenweb_cache_dropdown_message.hidden{
+    display: none;
+}

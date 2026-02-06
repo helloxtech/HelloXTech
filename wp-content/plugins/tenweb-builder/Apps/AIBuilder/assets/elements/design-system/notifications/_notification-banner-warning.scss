@@ -1,0 +1,10 @@
+@use "../variables/palette" as *;
+@use "./notification" as *;
+
+
+.ds-notification-banner-warning {
+  @extend .ds-notification;
+  border-radius: 6px;
+  background: linear-gradient(87deg, $golden-grass 0%, $saffron 100%);
+  color: $white;
+}

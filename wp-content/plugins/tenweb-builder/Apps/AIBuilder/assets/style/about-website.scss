@@ -1,0 +1,117 @@
+.twbb-ai-builder__left {
+  .create-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f5f5f7;
+    padding-left: 50px;
+    width: 100%;
+    overflow: hidden;
+    & > div{
+      width: 670px;
+    }
+    .example-label{
+      position: relative;
+      box-sizing: border-box;
+      height: 30px;
+      width: 86px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      .fade-label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        color: #fff;
+        background-color: #000;
+        border-radius: 92px;
+        padding: 5px 18px;
+        width: 86px;
+        box-sizing: border-box;
+        animation: twbbAIBuilderLabelFadeInOut 7.2s infinite;
+      }
+    }
+    .example-content{
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+      position: relative;
+      height: 150px;
+      overflow: hidden;
+      width: 670px;
+    }
+    .fade-text{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      animation: twbbAIBuilderFadeIn 36s infinite;
+      &.ecommerce {
+        animation: twbbAIBuilderFadeInEcom 28.8s infinite;
+      }
+      &:nth-child(1) {
+        animation-delay: 0s, 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 7.2s,7.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 14.4s,14.4s;
+      }
+      &:nth-child(4) {
+        animation-delay: 21.6s,21.6s;
+      }
+      &:nth-child(5) {
+        animation-delay: 28.8s,28.8s;
+      }
+    }
+    .fade-up {
+      animation: twbbAIBuilderFadeUpText 7.2s ease-out infinite;
+    }
+  }
+}
+
+@keyframes twbbAIBuilderFadeUpText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes twbbAIBuilderLabelFadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+         opacity: 1;
+  }
+}
+@keyframes twbbAIBuilderFadeIn {
+  0%, 19.44%, 100% {
+    opacity: 0;
+  }
+  5.56%, 16.67% {
+    opacity: 1;
+  }
+}
+
+@keyframes twbbAIBuilderFadeInEcom {
+  0%, 24%, 100% {
+    opacity: 0;
+  }
+  6%, 18% {
+    opacity: 1;
+  }
+}

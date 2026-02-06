@@ -1,0 +1,120 @@
+@use "../../../assets/design-system/variables/palette" as *;
+@use "../../../assets/design-system/mixins/flex" as *;
+@use "../../../assets/design-system/mixins/font" as *;
+
+
+.ds-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.ds-checkbox+label {
+  position: relative;
+  height: 20px;
+  @include flex(inline-flex, center, flex-start);
+  gap: 8px;
+  cursor: pointer;
+  @include font(14px, 400, 20px);
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 14px; height: 14px;
+    flex-shrink: 0; flex-grow: 0;
+    border-radius: 2px;
+    border: 1px solid rgba(118, 118, 128, 0.16);
+    background-color: $white;
+  }
+
+  &.big {
+    &:before {
+      width: 18px; height: 18px;
+    }
+  }
+}
+
+.ds-checkbox:checked+label:before {
+  border-color: $fun-blue;
+  background-color: $fun-blue;
+}
+.ds-checkbox:checked+label.green:before {
+  border-color: $forest-green;
+  background-color: $forest-green;
+}
+
+.ds-checkbox:not(.ds-checkbox-disabled):checked+label.purple:before {
+  border-color: $purple-blue;
+  background-color: $purple-blue;
+}
+
+.ds-checkbox:checked+label.white:before {
+  border-color: $white;
+  background-color: $white;
+}
+
+.ds-checkbox:checked+label.black:before {
+  border-color: $black;
+  background-color: $black;
+}
+
+.ds-checkbox:checked+label:after {
+  font-family: "db-icons", serif !important;
+  content: "\e9a1";
+  color: $white;
+  position: absolute;
+  left: 1px;
+  top: 0;
+}
+
+.ds-checkbox:checked+label.white:after {
+  color: $black;
+}
+
+.ds-checkbox:checked+label.big:after {
+  @include font(16px, 400, 20px);
+  left: 2px;
+}
+
+.ds-checkbox.ds-checkbox-partly:checked+label:after {
+  content: "\e9b2 ";
+}
+
+.ds-checkbox:not(:disabled):not(:checked)+label:hover:before {
+  border-color: $fun-blue;
+}
+
+.ds-checkbox:not(:disabled):not(:checked)+label.green:hover:before {
+  border-color: $forest-green;
+}
+
+.ds-checkbox:not(:disabled):not(:checked)+label.black:hover:before {
+  border-color: $black;
+}
+
+.ds-checkbox:disabled+label, .ds-checkbox.ds-checkbox-disabled+label {
+  pointer-events: none;
+  color: rgba($black, 0.5);
+}
+.ds-checkbox:disabled+label:before, .ds-checkbox.ds-checkbox-disabled+label:before {
+  //background-color: rgba($black, 0.2);
+  border-color: #7676800F;
+}
+
+.ds-checkbox.ds-checkbox-disabled-opacity+label {
+  pointer-events: none;
+}
+
+.ds-checkbox.ds-checkbox-disabled-opacity+label:before {
+  border-color: $eggshell !important;
+}
+
+.ds-checkbox.ds-checkbox-disabled-opacity:checked + label.black:before {
+  background-color: $eggshell !important;
+}
+
+ /* usage
+ <div>
+  <p class="ds-checkbox-label">Label</p>
+  <input class="ds-checkbox ds-checkbox-partly ds-checkbox-disabled ds-checkbox-disabled-opacity" checked type="checkbox" id="id">
+  <label for="id">text</label>
+</div>
+  */

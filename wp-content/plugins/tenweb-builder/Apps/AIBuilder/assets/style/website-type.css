@@ -1,0 +1,113 @@
+.twbb-ai-builder__left-content {
+  width: 670px;
+}
+.twbb-ai-builder__left-content .ai-blue {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+}
+.twbb-ai-builder__left-content .twbb-ai-builder__left-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 76px;
+  margin-bottom: 10px;
+}
+.twbb-ai-builder__left-content .twbb-ai-builder__left-desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.twbb-ai-builder__left-content [data-animate] {
+  overflow: hidden;
+}
+.twbb-ai-builder__left-content [data-animate].show span {
+  opacity: 1;
+  transform: translateY(0);
+}
+.twbb-ai-builder__left-content [data-animate] > span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(1.2em);
+  animation: slideUpWebsiteType 0.5s ease-in-out forwards;
+  animation-fill-mode: backwards;
+}
+.twbb-ai-builder__left-content [data-animate=slideUp1] > span {
+  animation-name: slideUpWebsiteType;
+  animation-delay: 0s;
+}
+.twbb-ai-builder__left-content [data-animate=slideUp2] > span {
+  animation-name: slideUpWebsiteType;
+  animation-delay: 10s;
+}
+
+.twbb-ai-builder__right .choose-website-type {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.twbb-ai-builder__right .choose-website-type > div {
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #f5f5f6;
+  border: none;
+}
+.twbb-ai-builder__right .choose-website-type .radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.twbb-ai-builder__right .choose-website-type .radio:checked + label:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  left: 16px;
+  top: 11px;
+  transform: translate(2px, 4px);
+  box-sizing: border-box;
+}
+.twbb-ai-builder__right .choose-website-type label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 11px 16px;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.twbb-ai-builder__right .choose-website-type label:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@keyframes slideUpWebsiteType {
+  0% {
+    opacity: 0;
+    transform: translateY(1.2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=website-type.css.map */

@@ -1,0 +1,20 @@
+@use "../variables/palette" as *;
+
+
+.ds-score-stroke {
+  stroke: $emerald;
+  color: $emerald;
+  fill: $white;
+  stroke-width: 4px;
+  stroke-linecap: round;
+
+  &.db-score-stroke-yellow {
+    stroke: rgba(255, 176, 28, 1);
+    color: rgba(255, 176, 28, 1);
+  }
+
+  &.db-score-stroke-red {
+    stroke: $red-light;
+    color: $red-light;
+  }
+}

@@ -1,0 +1,55 @@
+@use "../mixins/flex" as *;
+@use "../../../assets/design-system/variables/palette" as *;
+@use "./input" as *;
+@use "./input-description" as *;
+
+
+.ds-textarea {
+  @extend .ds-input;
+  height: unset;
+  margin: 0 0 -5px 0 !important;
+  &:disabled, &.disabled {
+    resize: none;
+  }
+  &.no-resize {
+    resize: none;
+  }
+  &.big {
+    height: 110px;
+  }
+
+  &-black {
+    @extend .ds-input;
+    &:focus, &:active, &:focus-visible {
+      border-color: $black;
+    }
+  }
+}
+.ds-textarea-label-wrap {
+  @include flex(flex, center, stretch);
+  margin-bottom: 8px;
+  .ds-input-label {
+    margin: 0;
+  }
+}
+
+.ds-textarea-counter {
+  @extend .ds-input-desc;
+  position: static;
+  padding: 0 3px;
+  margin-left: auto;
+  &.error {
+    color: $red-orange;
+  }
+}
+/* usage
+<div class="ds-input-wrap">
+  <div class="ds-textarea-label-wrap">
+    <span class="ds-input-label">Label</span>
+    <span class="ds-textarea-counter">0/200</span>
+  </div>
+  <textarea type="text" class="ds-textarea error" placeholder="placeholder"></textarea>
+  <span class="ds-input-desc">description</span>
+  <span class="ds-input-error-msg">error</span>
+</div>
+ */

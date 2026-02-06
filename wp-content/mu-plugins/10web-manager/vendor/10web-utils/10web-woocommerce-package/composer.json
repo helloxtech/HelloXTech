@@ -1,0 +1,53 @@
+{
+  "name": "10web-utils/10web-woocommerce-package",
+  "type": "git",
+  "description": "Woocommerce package",
+  "homepage": "https://10web.io",
+  "license": "proprietary",
+  "scripts": {
+    "phpcs": "phpcs --standard=WordPress-VIP-Go --warning-severity=1 --error-severity=1 -sp --basepath=. --ignore=./includes/external/*,./vendor/*,./assets/*,./node_modules/* ./",
+    "phpcs-compatibility-check": "phpcs --standard=PHPCompatibilityWP --runtime-set testVersion 5.6- --warning-severity=4 --error-severity=1 -sp   --basepath=. --ignore=./includes/external/*,./vendor/*,./assets/*,./node_modules/* ./",
+    "sniff-codestyle" : "php-cs-fixer fix --allow-risky=yes --config=.php-cs-fixer.php --dry-run  --show-progress=dots --diff --verbose",
+    "fix-codestyle" : "php-cs-fixer fix --allow-risky=yes --config=.php-cs-fixer.php --show-progress=dots",
+    "test-codestyle" : "composer fix-codestyle && composer sniff-codestyle"
+  },
+  "require": {
+    "ext-json": "*",
+    "10web/authorization": "*",
+    "firebase/php-jwt": "^6.0",
+    "paragonie/sodium_compat": "^1.20"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "php-stubs/wordpress-stubs": "*",
+    "automattic/phpcs-neutron-standard": "*",
+    "bamarni/composer-bin-plugin": "^1.4",
+    "automattic/vipwpcs": "^2.3",
+    "squizlabs/php_codesniffer": "3.*",
+    "wp-coding-standards/wpcs": "^2.3",
+    "friendsofphp/php-cs-fixer": "^2.19",
+    "tareq1988/wp-php-cs-fixer": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "ssh://git@gitlab.10web.io:6202/10web-utils/tenweb-authorization.git"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "platform": {
+      "php": "5.6.1"
+    },
+    "allow-plugins": {
+      "bamarni/composer-bin-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "TenWebWooP\\": "src/TenWebWooP"
+    }
+  }
+}

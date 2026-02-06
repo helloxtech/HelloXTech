@@ -1,0 +1,22 @@
+@use "../variables/palette" as *;
+
+
+.ds-bg-stroke {
+  opacity: 0.1;
+  stroke: $forest-green;
+  fill: $forest-green;
+  color: $forest-green;
+  stroke-width: 8;
+
+  &.db-stroke-yellow {
+    stroke: $ronchi;
+    fill: $ronchi;
+    color: $ronchi;
+  }
+
+  &.db-stroke-red {
+    stroke: $sunset-orange;
+    fill: $sunset-orange;
+    color: $sunset-orange;
+  }
+}
