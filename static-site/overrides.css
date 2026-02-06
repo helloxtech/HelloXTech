@@ -70,15 +70,24 @@
     width: 100% !important;
     margin: 0 !important;
   }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail:empty {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail {
+    display: block !important;
     padding-bottom: 0 !important;
-    height: auto !important;
+    height: 180px !important;
     margin-bottom: 12px !important;
+    overflow: hidden !important;
   }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail img {
     position: static !important;
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
   }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail__link {
     margin-bottom: 0 !important;
@@ -87,6 +96,14 @@
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__excerpt,
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__excerpt p {
     margin-bottom: 0 !important;
+  }
+
+  /* Mobile: keep only the first resource card to avoid huge gaps */
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-posts-container .elementor-post {
+    display: none !important;
+  }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-posts-container .elementor-post:first-child {
+    display: block !important;
   }
 }
 
