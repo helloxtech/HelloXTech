@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://hellox.ca/wp-sitemap-posts-page-1.xml</loc></sitemap>
-  <sitemap><loc>https://hellox.ca/wp-sitemap-posts-post-1.xml</loc></sitemap>
-  <sitemap><loc>https://hellox.ca/wp-sitemap-taxonomies-category-1.xml</loc></sitemap>
-  <sitemap><loc>https://hellox.ca/wp-sitemap-users-1.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://hellox.ca/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/2025/02/24/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/2025/03/19/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/2025/04/13/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/2025/04/17/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/about-us/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/category/crm-solutions/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/category/microsoft-dynamics-365/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/category/uncategorized/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/contact-us/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/customization-and-training/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/how-power-apps-licenses-impact-dataverse-storage/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/how-to-choose-the-right-microsoft-dynamics-365-solution-for-your-business/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/maximizing-efficiency-with-microsoft-dynamics-365-a-practical-guide-for-smbs/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/microsoft-dynamics-365-implementation/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/ongoing-support/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/privacy-policy/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/rental-smart/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/resources/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/services/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/terms-and-conditions/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/top-5-reasons-why-your-smb-needs-a-crm-solution/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/understanding-microsoft-dataverse-power-automate-and-integration-options-for-your-business/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/user-guide-managing-export-to-pdf-settings/</loc><lastmod>2026-02-06</lastmod></url>
+  <url><loc>https://hellox.ca/wp-json/</loc><lastmod>2026-02-06</lastmod></url>
+</urlset>
