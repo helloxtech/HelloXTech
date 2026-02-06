@@ -1,0 +1,21 @@
+/* Shared mobile fixes */
+@media (max-width: 767px) {
+  /* Prevent hero background from cropping the HelloX image on mobile */
+  #hero {
+    background-size: contain !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Reduce large gaps between Resource cards */
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-posts-container {
+    row-gap: 16px !important;
+    grid-row-gap: 16px !important;
+  }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post {
+    margin-bottom: 0 !important;
+  }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail {
+    margin-bottom: 12px !important;
+  }
+}
