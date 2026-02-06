@@ -3,19 +3,65 @@
   /* Prevent hero background from cropping the HelloX image on mobile */
   #hero {
     background-size: contain !important;
-    background-position: center top !important;
+    background-position: center 78% !important;
     background-repeat: no-repeat !important;
+    min-height: 70vh !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Move hero headline up slightly */
+  #hero [data-id="6rfcs9wy"] {
+    margin-top: -28px !important;
+  }
+
+  #hero .e-con-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  #hero [data-id="5cirao1l"] {
+    margin-top: 6px !important;
   }
 
   /* Reduce large gaps between Resource cards */
   .elementor-page-123 .elementor-element-dkn22tik .elementor-posts-container {
-    row-gap: 16px !important;
-    grid-row-gap: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
   }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post {
     margin-bottom: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: stretch !important;
+  }
+  .elementor-page-123 .elementor-element-dkn22tik.twbb-posts--fullHeight_yes .elementor-post {
+    height: auto !important;
   }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail {
     margin-bottom: 12px !important;
   }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__text,
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__excerpt,
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__excerpt p {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Header contact button styling */
+#header .elementor-element-4x6eghkc .elementor-button {
+  background: #6f8f2e !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+/* Replace pure black with dark gray in common UI elements */
+body {
+  color: #1f1f1f;
 }
