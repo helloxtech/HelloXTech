@@ -2,28 +2,53 @@
 @media (max-width: 767px) {
   /* Prevent hero background from cropping the HelloX image on mobile */
   #hero {
-    background-size: contain !important;
-    background-position: center 78% !important;
+    background-image: linear-gradient(90deg, #6f6f6f 0%, #b5b5b5 55%, #e2e2e2 100%) !important;
+    background-size: cover !important;
+    background-position: center top !important;
     background-repeat: no-repeat !important;
-    min-height: 70vh !important;
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 20px !important;
+    padding-bottom: 14px !important;
     justify-content: flex-start !important;
+    overflow: visible !important;
+  }
+
+  #hero > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-image: none !important;
+  }
+
+  /* Use a dedicated logo block below the text to prevent overlap */
+  #hero::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 160px !important;
+    margin-top: 12px !important;
+    background-color: transparent !important;
+    background-image: url("/wp-content/uploads/2025/02/logo_irON2h5C.webp") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 70% auto !important;
   }
 
   /* Move hero headline up slightly */
   #hero [data-id="6rfcs9wy"] {
-    margin-top: -28px !important;
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
   }
 
   #hero .e-con-inner {
     display: flex !important;
     flex-direction: column !important;
-    gap: 18px !important;
+    gap: 10px !important;
   }
 
   #hero [data-id="5cirao1l"] {
-    margin-top: 6px !important;
+    margin-top: 0 !important;
+    max-width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* Reduce large gaps between Resource cards */
@@ -41,8 +66,22 @@
   .elementor-page-123 .elementor-element-dkn22tik.twbb-posts--fullHeight_yes .elementor-post {
     height: auto !important;
   }
+  .elementor-page-123 .elementor-element-dkn22tik .twbb-image-container {
+    width: 100% !important;
+    margin: 0 !important;
+  }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail {
+    padding-bottom: 0 !important;
+    height: auto !important;
     margin-bottom: 12px !important;
+  }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail img {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .elementor-page-123 .elementor-element-dkn22tik .elementor-post__thumbnail__link {
+    margin-bottom: 0 !important;
   }
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__text,
   .elementor-page-123 .elementor-element-dkn22tik .elementor-post__excerpt,
