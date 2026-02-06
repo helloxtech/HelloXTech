@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hellox.ca/sitemap.xml
