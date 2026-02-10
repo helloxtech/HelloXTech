@@ -1,740 +1,638 @@
-<!DOCTYPE html>
-<html class="twbb" lang="en-US">
-<head><script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script><script id="jquery-migrate-js" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script><script id="tenweb-website-builder-theme-script-js" src="/wp-content/themes/tenweb-website-builder-theme/assets/js/scripts.min.js?ver=2.1.19"></script><script>
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/tenweb-website-builder-theme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script><script>
-				const lazyloadRunObserver = () => {
-					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-						entries.forEach( ( entry ) => {
-							if ( entry.isIntersecting ) {
-								let lazyloadBackground = entry.target;
-								if( lazyloadBackground ) {
-									lazyloadBackground.classList.add( 'e-lazyloaded' );
-								}
-								lazyloadBackgroundObserver.unobserve( entry.target );
-							}
-						});
-					}, { rootMargin: '200px 0px 200px 0px' } );
-					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-						lazyloadBackgroundObserver.observe( lazyloadBackground );
-					} );
-				};
-				const events = [
-					'DOMContentLoaded',
-					'elementor/lazyload/observe',
-				];
-				events.forEach( ( event ) => {
-					document.addEventListener( event, lazyloadRunObserver );
-				} );
-			</script><script id="elementor-webpack-runtime-js" src="/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.32.5"></script><script id="elementor-frontend-modules-js" src="/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.32.5"></script><script id="jquery-ui-core-js" src="/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script><script id="elementor-frontend-js-before">
-/* <![CDATA[ */
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.32.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"container":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"import-export-customization":true,"form-submissions":true,"co_pilot":true,"fast_editing_tools":true,"sections_generation":true,"smart_scale":true,"website_navigation":true},"urls":{"assets":"https:\/\/hellox.ca\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/hellox.ca\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/hellox.ca\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"b494e3b48f"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":347,"title":"Rental%20Smart%20%E2%80%93%20HelloX%20Tech","excerpt":"","featuredImage":false}};
-//# sourceURL=elementor-frontend-js-before
-/* ]]> */
-</script><script id="elementor-frontend-js" src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.32.5"></script><script id="font-awesome-4-shim-js" src="/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.32.5"></script><script id="twbb-pro-features-frontend-script-js-extra">
-/* <![CDATA[ */
-var ElementorTenwebFrontendConfig = {"ajaxurl":"https://hellox.ca/wp-admin/admin-ajax.php","nonce":"d2f22acbbc","urls":{"assets":"https://hellox.ca/wp-content/plugins/tenweb-builder/pro-features/assets/"}};
-//# sourceURL=twbb-pro-features-frontend-script-js-extra
-/* ]]> */
-</script><script id="twbb-pro-features-frontend-script-js" src="/wp-content/plugins/tenweb-builder/pro-features/assets/js/concated_frontend.min.js?ver=1.37.61"></script><script id="underscore-js" src="/wp-includes/js/underscore.min.js?ver=1.13.7"></script><script id="twbb-smartmenus-js" src="/wp-content/plugins/tenweb-builder/assets/libs/jquery.smartmenus.js?ver=1.37.61"></script><script id="imagesloaded-js" src="/wp-includes/js/imagesloaded.min.js?ver=5.0.0"></script><script id="masonry-js" src="/wp-includes/js/masonry.min.js?ver=4.2.2"></script><script id="twbb-frontend-scripts-js-extra">
-/* <![CDATA[ */
-var twbb = {"ajaxurl":"https://hellox.ca/wp-admin/admin-ajax.php","home_url":"https://hellox.ca","nonce":"4e20e4cf5a","tenweb_dashboard":"https://my.10web.io","swiper_latest":"","woocommerce":{"add_to_cart":"Add to cart","added":"Added"}};
-var TWBBFrontendConfig = {"facebook_sdk":{"lang":"en_US","app_id":""}};
-//# sourceURL=twbb-frontend-scripts-js-extra
-/* ]]> */
-</script><script id="twbb-frontend-scripts-js" src="/wp-content/plugins/tenweb-builder/assets/frontend/js/frontend.min.js?ver=1.37.61"></script><script id="twbb-sticky-lib-scripts-js" src="/wp-content/plugins/tenweb-builder/widgets/sticky/assets/js/jquery.sticky.min.js?ver=1.37.61"></script><script id="twbb-parallax-lib-scripts-js" src="/wp-content/plugins/tenweb-builder/widgets/parallax/assets/js/jquery.parallax.js?ver=1.37.61"></script><script id="twbb-custom-options-frontend-scripts-js" src="/wp-content/plugins/tenweb-builder/assets/frontend/js/custom_options_frontend.min.js?ver=1.37.61"></script><script>
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental Smart | Property Management Platform for British Columbia</title>
+    <meta
+      name="description"
+      content="Rental Smart by HelloX Tech helps landlords and residents across British Columbia manage listings, leasing, rent workflows, and maintenance in one platform."
+    />
+    <meta
+      name="keywords"
+      content="Rental Smart, property management software BC, landlord portal, resident portal, lease management, rent collection, maintenance requests"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://hellox.ca/rental-smart/" />
 
-                if (window.two_page_loaded) {
-                    console.log("dispatching events");console.log("Dispatching DOMContentLoaded event");document.dispatchEvent(new Event("DOMContentLoaded"));console.log("Dispatching Load event");window.dispatchEvent(new Event("load"));console.log("Dispatching ClickOrTouch event");two_loading_events(two_event);
-                }
-                else {
-                    console.log("waiting for page to load");
-                    window.addEventListener("load", function() {
-                        console.log("dispatching events");
-                        document.dispatchEvent(new Event("DOMContentLoaded"));
-                    });
-                }
-                </script><link href="/wp-content/cache/tw_optimize/css/two_347_aggregated_5031697833a1b266bf9fe4d7a52cf38e_delay.min.css?date=1770341978" rel="stylesheet"/><link href="/wp-content/cache/tw_optimize/css/two_347_aggregated.min.css?date=1770341978" media="all" rel="stylesheet" type="text/css"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script data-pagespeed-no-defer="" data-two-no-delay="" type="text/javascript">window.addEventListener("load",function(){window.two_page_loaded=true;});function logLoaded(){console.log("window is loaded");}
-(function listen(){if(window.two_page_loaded){logLoaded();}else{console.log("window is notLoaded");window.setTimeout(listen,50);}})();function applyElementorControllers(){if(!window.elementorFrontend)return;window.elementorFrontend.init()}
-function applyViewCss(cssUrl){if(!cssUrl)return;const cssNode=document.createElement('link');cssNode.setAttribute("href",cssUrl);cssNode.setAttribute("rel","stylesheet");cssNode.setAttribute("type","text/css");document.head.appendChild(cssNode);}
-var two_scripts_load=true;var two_load_delayed_javascript=function(event){if(two_scripts_load){two_scripts_load=false;two_connect_script(0);if(typeof two_delay_custom_js_new=="object"){document.dispatchEvent(two_delay_custom_js_new)}
-window.two_delayed_loading_events.forEach(function(event){console.log("removed event listener");document.removeEventListener(event,two_load_delayed_javascript,false)});}};function two_loading_events(event){setTimeout(function(event){return function(){var t=function(eventType,elementClientX,elementClientY){var _event=new Event(eventType,{bubbles:true,cancelable:true});if(eventType==="click"){_event.clientX=elementClientX;_event.clientY=elementClientY}else{_event.touches=[{clientX:elementClientX,clientY:elementClientY}]}
-return _event};var element;if(event&&event.type==="touchend"){var touch=event.changedTouches[0];element=document.elementFromPoint(touch.clientX,touch.clientY);element.dispatchEvent(t('touchstart',touch.clientX,touch.clientY));element.dispatchEvent(t('touchend',touch.clientX,touch.clientY));element.dispatchEvent(t('click',touch.clientX,touch.clientY));}else if(event&&event.type==="click"){element=document.elementFromPoint(event.clientX,event.clientY);element.dispatchEvent(t(event.type,event.clientX,event.clientY));}}}(event),150);}</script><script data-pagespeed-no-defer="" data-two-no-delay="" type="text/javascript">window.two_delayed_loading_attribute="data-twodelayedjs";window.two_delayed_js_load_libs_first="";window.two_delayed_loading_events=["mousemove","click","keydown","wheel","touchmove","touchend"];window.two_event_listeners=[];</script><script data-pagespeed-no-defer="" data-two-no-delay="" type="text/javascript">document.onreadystatechange=function(){if(document.readyState==="interactive"){if(window.two_delayed_loading_attribute!==undefined){window.two_delayed_loading_events.forEach(function(ev){window.two_event_listeners[ev]=document.addEventListener(ev,two_load_delayed_javascript,{passive:false})});}
-if(window.two_delayed_loading_attribute_css!==undefined){window.two_delayed_loading_events_css.forEach(function(ev){window.two_event_listeners_css[ev]=document.addEventListener(ev,two_load_delayed_css,{passive:false})});}
-if(window.two_load_delayed_iframe!==undefined){window.two_delayed_loading_iframe_events.forEach(function(ev){window.two_iframe_event_listeners[ev]=document.addEventListener(ev,two_load_delayed_iframe,{passive:false})});}}}</script><title>Rental Smart – HelloX Tech</title>
-<meta content="max-image-preview:large" name="robots"/>
-<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
-<link href="/feed/" rel="alternate" title="HelloX Tech » Feed" type="application/rss+xml"/>
-<link href="/comments/feed/" rel="alternate" title="HelloX Tech » Comments Feed" type="application/rss+xml"/>
-<link href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhellox.ca%2Frental-smart%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
-<link href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhellox.ca%2Frental-smart%2F&amp;format=xml" rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans%3Awght%40300%3B400%3B600%3B700%3B800&amp;display=swap#038;display=swap&amp;ver=2.1.19" id="tenweb-website-builder-open-sanse-css" media="all" rel="stylesheet" type="text/css"/>
-<link href="/wp-json/" rel="https://api.w.org/"/><link href="/wp-json/wp/v2/pages/347" rel="alternate" title="JSON" type="application/json"/><link href="/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
-<meta content="WordPress 6.9.1" name="generator"/>
-<link href="/rental-smart/" rel="canonical"/>
-<link href="/?p=347" rel="shortlink"/>
-<meta content="Elementor 3.32.5; features: e_font_icon_svg; settings: css_print_method-external, google_font-enabled, font_display-swap" name="generator"/>
-<link href="/wp-content/uploads/2025/02/HelloX_Logo--150x112.jpg" rel="icon" sizes="32x32"/>
-<link href="/wp-content/uploads/2025/02/HelloX_Logo-.jpg" rel="icon" sizes="192x192"/>
-<link href="/wp-content/uploads/2025/02/HelloX_Logo-.jpg" rel="apple-touch-icon"/>
-<meta content="/wp-content/uploads/2025/02/HelloX_Logo-.jpg" name="msapplication-TileImage"/>
-<link href="/overrides.css" rel="stylesheet"/></head>
-<body class="wp-singular page-template-default page page-id-347 wp-custom-logo wp-theme-tenweb-website-builder-theme user-registration-page no-sidebar elementor-default elementor-kit-55 elementor-page elementor-page-347">
-<script data-pagespeed-no-defer="" data-two-no-delay="" type="text/javascript">
-</script>
-<script data-pagespeed-no-defer="" data-two-no-delay="" id="two_worker" type="javascript/worker">
-                let two_font_actions = "not_load";
-            let two_css_length=0;let two_connected_css_length=0;let two_uncritical_fonts=null;let two_uncritical_fonts_status=false;if(two_font_actions=="not_load"||two_font_actions=="exclude_uncritical_fonts"){two_uncritical_fonts_status=true;}
-self.addEventListener("message",function(e){two_css_length=e.data.css.length;if(!e.data.critical_data.critical_css||!e.data.critical_data.critical_fonts){two_uncritical_fonts_status=false;}
-if(e.data.font.length>0){two_fetch_inbg(e.data.font,"font");}
-if(e.data.js.length>0){two_fetch_inbg(e.data.js,"js");}
-if(e.data.excluded_js.length>0){two_fetch_inbg(e.data.excluded_js,"js",true);}
-if(e.data.css.length>0){two_fetch_inbg(e.data.css,"css");}},false);function two_fetch_inbg(data,type,excluded_js=false){for(let i in data){if(typeof data[i].url!="undefined"){var modifiedScript=null;if(type==="js"&&typeof data[i].exclude_blob!="undefined"&&data[i].exclude_blob){modifiedScript={id:i,status:'ok',type:type,url:data[i].url,uid:data[i].uid};two_send_worker_data(modifiedScript);continue;}
-fetch(data[i].url,{mode:'no-cors',redirect:'follow'}).then((r)=>{if(!r.ok||r.status!==200){throw Error(r.statusText);}
-if(two_uncritical_fonts_status&&type=="css"){return(r.text());}else{return(r.blob());}}).then((content_)=>{let sheetURL="";if(two_uncritical_fonts_status&&type=="css"){sheetURL=two_create_blob(content_);}else{sheetURL=URL.createObjectURL(content_);}
-modifiedScript=null;if(type=="css"){modifiedScript={id:i,type:type,status:'ok',media:data[i].media,url:sheetURL,uid:data[i].uid,original_url:data[i].url,two_uncritical_fonts:two_uncritical_fonts,};}else if(type=="js"){modifiedScript={id:i,status:'ok',type:type,url:sheetURL,uid:data[i].uid};}else if(type=="font"){modifiedScript={status:'ok',type:type,main_url:data[i].url,url:sheetURL,font_face:data[i].font_face};}
-if(excluded_js){modifiedScript.excluded_from_delay=true;}
-two_send_worker_data(modifiedScript);}).catch(function(error){console.log("error in fetching: "+error.toString()+", bypassing "+data[i].url);fetch(data[i].url,{redirect:'follow'}).then((r)=>{if(!r.ok||r.status!==200){throw Error(r.statusText);}
-if(two_uncritical_fonts_status&&type=="css"){return(r.text());}else{return(r.blob());}}).then((content_)=>{let sheetURL="";if(two_uncritical_fonts_status&&type=="css"){sheetURL=two_create_blob(content_);}else{sheetURL=URL.createObjectURL(content_);}
-var modifiedScript=null;if(type=="css"){modifiedScript={id:i,type:type,status:'ok',media:data[i].media,url:sheetURL,uid:data[i].uid,original_url:data[i].url,two_uncritical_fonts:two_uncritical_fonts,};}else if(type=="js"){modifiedScript={id:i,status:'ok',type:type,url:sheetURL,uid:data[i].uid};}else if(type=="font"){modifiedScript={status:'ok',type:type,main_url:data[i].url,url:sheetURL,font_face:data[i].font_face};}
-if(excluded_js){modifiedScript.excluded_from_delay=true;}
-two_send_worker_data(modifiedScript);}).catch(function(error){console.log("error in fetching no-cors: "+error.toString()+", bypassing "+data[i].url);try{console.log("error in fetching: "+error.toString()+", sending XMLHttpRequest"+data[i].url);let r=new XMLHttpRequest;if(two_uncritical_fonts_status&&type=="css"){r.responseType="text";}else{r.responseType="blob";}
-r.onload=function(content_){let sheetURL="";if(two_uncritical_fonts_status&&type=="css"){sheetURL=two_create_blob(content_.target.response);}else{sheetURL=URL.createObjectURL(content_.target.response);}
-if(r.status!==200){two_XMLHttpRequest_error(excluded_js,data[i],type,i);return;}
-console.log("error in fetching: "+error.toString()+", XMLHttpRequest success "+data[i].url);let modifiedScript=null;if(type=="css"){modifiedScript={id:i,type:type,status:'ok',media:data[i].media,url:sheetURL,uid:data[i].uid,two_uncritical_fonts:two_uncritical_fonts,};}else if(type=="js"){modifiedScript={id:i,type:type,status:'ok',url:sheetURL,uid:data[i].uid};}else if(type=="font"){modifiedScript={type:type,status:'ok',main_url:data[i].url,url:sheetURL,font_face:data[i].font_face};}
-if(excluded_js){modifiedScript.excluded_from_delay=true;}
-two_send_worker_data(modifiedScript);};r.onerror=function(){two_XMLHttpRequest_error(excluded_js,data[i],type,i)};r.open("GET",data[i].url,true);r.send();}catch(e){console.log("error in fetching: "+e.toString()+", running fallback for "+data[i].url);var modifiedScript=null;if(type=="css"||type=="js"){modifiedScript={id:i,type:type,status:'error',url:data[i].url,uid:data[i].uid};}else if(type=="font"){modifiedScript={type:type,status:'error',url:data[i].url,font_face:data[i].font_face};}
-if(excluded_js){modifiedScript.excluded_from_delay=true;}
-two_send_worker_data(modifiedScript);}});});}}}
-function two_XMLHttpRequest_error(excluded_js,data_i,type,i){console.log("error in fetching: XMLHttpRequest failed "+data_i.url);var modifiedScript=null;if(type=="css"||type=="js"){modifiedScript={id:i,type:type,status:'error',url:data_i.url,uid:data_i.uid};}else if(type=="font"){modifiedScript={type:type,status:'error',url:data_i.url,font_face:data_i.font_face};}
-if(excluded_js){modifiedScript.excluded_from_delay=true;}
-two_send_worker_data(modifiedScript);}
-function two_create_blob(str){two_uncritical_fonts="";const regex=/@font-face\s*\{(?:[^{}])*\}/sig;str=str.replace(regex,function(e){if(e.includes("data:application")){return e;}
-two_uncritical_fonts+=e;return"";});let blob_data=new Blob([str],{type:"text/css"});let sheetURL=URL.createObjectURL(blob_data);return sheetURL;}
-function two_send_worker_data(data){if(data.type=="css"){two_connected_css_length++;data.length=two_css_length;data.connected_length=two_connected_css_length;}
-self.postMessage(data)}
-        </script>
-<div class="elementor elementor-139" data-elementor-id="139" data-elementor-type="twbb_header">
-<div class="elementor-element elementor-element-hekn4960 twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="hekn4960" data-settings='{"background_background":"classic","tenweb_sticky":"top","tenweb_sticky_on":["desktop","tablet","mobile"],"tenweb_sticky_offset":0,"tenweb_sticky_effects_offset":0}' id="header">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-3w2lii72 elementor-widget elementor-widget-image" data-element_type="widget" data-id="3w2lii72" data-widget_type="image.default">
-<div class="elementor-widget-container">
-<a href="/">
-<noscript><img alt="" class="attachment-full size-full wp-image-60" decoding="async" src="/wp-content/uploads/2025/02/logo_rzy9mznW.webp"/></noscript><img alt="" class="lazy attachment-full size-full wp-image-60" decoding="async" src="/wp-content/uploads/2025/02/logo_rzy9mznW.webp"/> </a>
-</div>
-</div>
-<div class="elementor-element elementor-element-adku33of twbb-nav-menu__align-right twbb-responsive-nav-menu--horizontal twbb-responsive-nav-menu--tablet-dropdown twbb-responsive-nav-menu--mobile-dropdown twbb-nav-menu--indicator-classic twbb-nav-menu--toggle twbb-nav-menu--burger twbb-nav-menu--stretch yes twbb-nav-menu__text-align-center elementor-widget elementor-widget-twbb-nav-menu" data-element_type="widget" data-id="adku33of" data-settings='{"layout":"horizontal","layout_tablet":"dropdown","layout_mobile":"dropdown","toggle":"burger","full_width":" yes"}' data-widget_type="twbb-nav-menu.default">
-<div class="elementor-widget-container">
-<nav class="twbb-nav-menu--main twbb-nav-menu__container e--pointer-none">
-<ul class="twbb-nav-menu twbb-menu_term_id-0" id="menu-1-adku33of">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a class="twbb-item" href="/services/">Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a class="twbb-item" href="/resources/">Resources</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a class="twbb-item" href="/about-us/">About Us</a></li></ul> </nav>
-<div aria-expanded="false" aria-label="Menu Toggle" class="twbb-menu-toggle" role="button" tabindex="0">
-<svg aria-hidden="true" class="twbb-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar" role="presentation" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path></svg><svg aria-hidden="true" class="twbb-menu-toggle__icon--close e-font-icon-svg e-eicon-close" role="presentation" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg> <span class="elementor-screen-only">Menu</span>
-</div>
-<nav class="twbb-nav-menu--dropdown twbb-nav-menu__container">
-<ul class="twbb-nav-menu twbb-menu_term_id-0" id="menu-2-adku33of">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a class="twbb-item" href="/services/">Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a class="twbb-item" href="/resources/">Resources</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a class="twbb-item" href="/about-us/">About Us</a></li></ul> </nav>
-</div>
-</div>
-<div class="elementor-element elementor-element-zzs7o19a e-con-full e-flex e-con e-child" data-element_type="container" data-id="zzs7o19a">
-<div class="elementor-element elementor-element-6hui5rwq elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-button" data-element_type="widget" data-id="6hui5rwq" data-widget_type="button.default">
-<div class="elementor-widget-container">
-<div class="elementor-button-wrapper">
-<a class="elementor-button elementor-button-link elementor-size-sm" href="/contact-us//">
-<span class="elementor-button-content-wrapper">
-<span class="elementor-button-text">Contact Us</span>
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor elementor-347" data-elementor-id="347" data-elementor-type="wp-page">
-<section class="elementor-section elementor-top-section elementor-element elementor-element-7f979378 elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="7f979378" data-settings='{"stretch_section":"section-stretched"}'>
-<div class="elementor-container elementor-column-gap-no">
-<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-74a2142f" data-element_type="column" data-id="74a2142f">
-<div class="elementor-widget-wrap elementor-element-populated">
-<div class="elementor-element elementor-element-79286357 elementor-widget elementor-widget-twbbpost-content" data-element_type="widget" data-id="79286357" data-widget_type="twbbpost-content.default">
-<div class="elementor-widget-container">
-<div class="elementor elementor-347" data-elementor-id="347" data-elementor-type="wp-page">
-<div class="elementor-element elementor-element-f2c6f71 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="f2c6f71">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-bd61e91 elementor-widget elementor-widget-template" data-element_type="widget" data-id="bd61e91" data-widget_type="template.default">
-<div class="elementor-widget-container">
-<div class="elementor-template">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-18c5a0 e-con-full twbb_section twbb_full_h e-flex e-con e-parent" data-element_type="container" data-id="18c5a0" data-settings='{"background_background":"classic"}' id="hero">
-<div class="elementor-element elementor-element-7735b47b e-con-full e-flex e-con e-child" data-element_type="container" data-id="7735b47b">
-<div class="elementor-element elementor-element-29f4827d elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb-headline--style-highlight elementor-widget elementor-widget-twbbanimated-headline" data-element_type="widget" data-id="29f4827d" data-settings='{"highlighted_text":"Rental Smart","marker":"underline_zigzag","headline_style":"highlight"}' data-widget_type="twbbanimated-headline.default">
-<div class="elementor-widget-container">
-<h1 class="twbb-headline">
-<span class="twbb-headline-dynamic-wrapper twbb-headline-text-wrapper"></span>
-<span class="twbb-headline-plain-text twbb-headline-text-wrapper">: Your Property, Our Priority</span>
-</h1>
-</div>
-</div>
-<div class="elementor-element elementor-element-64a032f9 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="64a032f9" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>Maximize your property’s potential with Rental Smart. We offer comprehensive property management solutions, from tenant screening to maintenance, ensuring your peace of mind and optimal returns. Let us handle the complexities while you reap the rewards.</p> </div>
-</div>
-<div class="elementor-element elementor-element-70ca9b47 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-mobile-button-align-stretch elementor-button-align-center elementor-invisible elementor-widget elementor-widget-twbb_form" data-element_type="widget" data-id="70ca9b47" data-settings='{"_animation":"fadeInUp","button_width":"25","step_next_label":"Next","step_previous_label":"Previous","step_type":"number_text","step_icon_shape":"circle"}' data-widget_type="twbb_form.default">
-<div class="elementor-widget-container">
-<form class="elementor-form" method="post">
-<input name="post_id" type="hidden" value="347"/>
-<input name="form_id" type="hidden" value="70ca9b47"/>
-<input name="referer_title" type="hidden" value="Rental Smart"/>
-<input name="queried_id" type="hidden" value="347"/>
-<div class="elementor-form-fields-wrapper elementor-labels-">
-<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-66 elementor-field-required">
-<label class="elementor-field-label elementor-screen-only" for="form-field-email">
-								Email							</label>
-<input aria-required="true" class="elementor-field elementor-size-sm elementor-field-textual" id="form-field-email" name="form_fields[email]" placeholder="Enter your email" required="required" size="1" type="email"/>
-</div>
-<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-25 e-form__buttons">
-<button class="elementor-button" type="submit">
-<span>
-<span class="elementor-button-icon">
-</span>
-<span class="elementor-button-text">Sign up</span>
-</span>
-</button>
-<button class="elementor-button elementor-hidden" type="reset">
-<span>
-</span>
-</button>
-</div>
-<div class="elementor-form-text-after-description-wrapper elementor-field-group elementor-column elementor-col-100 elementor-widget-wrap">
-<div class="elementor-text-editor elementor-clearfix elementor-element">By signing up, you agree to our <a href="/terms-and-conditions">Terms and Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>. We are committed to protecting your data and providing a secure experience.</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-<div class="elementor-element elementor-element-11715b50 elementor-widget elementor-widget-template" data-element_type="widget" data-id="11715b50" data-widget_type="template.default">
-<div class="elementor-widget-container">
-<div class="elementor-template">
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-5b1e0dbe elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="5b1e0dbe" data-widget_type="image.default">
-<div class="elementor-widget-container">
-<noscript><img alt="" class="attachment-full size-full wp-image-844" decoding="async" fetchpriority="high" height="1024" sizes="(max-width: 1024px) 100vw, 1024px" src="/wp-content/uploads/2025/04/tenweb_media_s3zteebws.webp" srcset="/wp-content/uploads/2025/04/tenweb_media_s3zteebws.webp 1024w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-300x300.webp 300w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-150x150.webp 150w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-768x768.webp 768w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-600x600.webp 600w" width="1024"/></noscript><img alt="" class="lazy attachment-full size-full wp-image-844" decoding="async" fetchpriority="high" height="1024" sizes="(max-width: 1024px) 100vw, 1024px" src="/wp-content/uploads/2025/04/tenweb_media_s3zteebws.webp" srcset="/wp-content/uploads/2025/04/tenweb_media_s3zteebws.webp 1024w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-300x300.webp 300w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-150x150.webp 150w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-768x768.webp 768w, /wp-content/uploads/2025/04/tenweb_media_s3zteebws-600x600.webp 600w" width="1024"/> </div>
-</div>
-</div>
-<div class="elementor-element elementor-element-8b7ef3b twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="8b7ef3b" id="about-us">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-1473a104 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1473a104" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h1 class="elementor-heading-title elementor-size-default">About Rental Smart</h1> </div>
-</div>
-<div class="elementor-element elementor-element-9e7749d elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="9e7749d" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>Rental Smart began with a simple goal—to provide dependable, high-quality property management. Over time, our dedication to service excellence has shaped who we are today. As we’ve grown, so has our commitment to supporting clients with care, consistency, and professionalism.</p> </div>
-</div>
-<div class="elementor-element elementor-element-70cb9b5a e-con-full e-flex e-con e-child" data-element_type="container" data-id="70cb9b5a">
-<div class="elementor-element elementor-element-53470b6e elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="53470b6e" data-widget_type="icon-box.default">
-<div class="elementor-widget-container">
-<div class="elementor-icon-box-wrapper">
-<div class="elementor-icon-box-icon">
-<span class="elementor-icon">
-<svg aria-hidden="true" class="e-font-icon-svg e-fas-bullseye" viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 432c-101.69 0-184-82.29-184-184 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184zm0-312c-70.69 0-128 57.31-128 128s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 192c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"></path></svg> </span>
-</div>
-<div class="elementor-icon-box-content">
-<h4 class="elementor-icon-box-title">
-<span>
-							Our Mission						</span>
-</h4>
-<p class="elementor-icon-box-description">
-						We aim to simplify property management, enhancing investment value while ensuring a seamless experience for tenants. Our mission drives us to innovate and improve continuously.					</p>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-f0dbbc0 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="f0dbbc0" data-widget_type="icon-box.default">
-<div class="elementor-widget-container">
-<div class="elementor-icon-box-wrapper">
-<div class="elementor-icon-box-icon">
-<span class="elementor-icon">
-<svg aria-hidden="true" class="e-font-icon-svg e-fas-thumbs-up" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg> </span>
-</div>
-<div class="elementor-icon-box-content">
-<h4 class="elementor-icon-box-title">
-<span>
-							Our Value						</span>
-</h4>
-<p class="elementor-icon-box-description">
-						Integrity, customer focus, and innovation are at the core of our operations, guiding us to exceed client expectations and embrace technology for better service.					</p>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-6c47837b elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="6c47837b" data-widget_type="icon-box.default">
-<div class="elementor-widget-container">
-<div class="elementor-icon-box-wrapper">
-<div class="elementor-icon-box-icon">
-<span class="elementor-icon">
-<svg aria-hidden="true" class="e-font-icon-svg e-fas-users" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path></svg> </span>
-</div>
-<div class="elementor-icon-box-content">
-<h4 class="elementor-icon-box-title">
-<span>
-							Meet Our Team						</span>
-</h4>
-<p class="elementor-icon-box-description">
-						Our team consists of experienced professionals dedicated to providing exceptional service. From our engineer to client relations, each member plays a vital role in our success.					</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-1366abf3 twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="1366abf3" data-settings='{"background_background":"classic"}' id="property-management-dashboard">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-50946c34 e-con-full e-flex e-con e-child" data-element_type="container" data-id="50946c34">
-<div class="elementor-element elementor-element-5de02445 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="5de02445" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h2 class="elementor-heading-title elementor-size-default"><em>Rental Smart</em> Dashboard: Your Property Management Command Center</h2> </div>
-</div>
-<div class="elementor-element elementor-element-60f5df5a elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="60f5df5a" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>Our comprehensive dashboard provides a centralized hub for managing all aspects of your properties. From detailed financial reports to real-time maintenance updates, gain complete control and visibility. Simplify your property management tasks and maximize your investment returns with Rental Smart.</p> </div>
-</div>
-</div>
-<div class="elementor-element elementor-element-135942ea e-con-full e-flex e-con e-child" data-element_type="container" data-id="135942ea">
-<div class="elementor-element elementor-element-5e3a11b0 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb_cta-button-wrapper-left twbb_cta-valign-align-space_between twbb_cta-position-image-top twbb_cta-tablet-position-image-top twbb_cta-mobile-position-image-top twbb_cta-button-wrapper-left twbb_cta-button-wrapper-center twbb_cta-position-button-bottom twbb_cta-tablet-position-button-bottom twbb_cta-mobile-position-button-bottom elementor-invisible elementor-widget elementor-widget-twbb_call-to-action" data-element_type="widget" data-id="5e3a11b0" data-settings='{"_animation":"fadeInUp"}' data-widget_type="twbb_call-to-action.default">
-<div class="elementor-widget-container">
-<div class="twbb_cta-wrapper">
-<div class="twbb_cta-image-background-wrapper">
-<span class="twbb_cta-image-background-overlay"></span>
-<div class="twbb_cta-image-html-tag">
-<noscript><img decoding="async" src="/wp-content/uploads/2025/04/image_0-2.webp"/></noscript><img class="lazy" decoding="async" src="/wp-content/uploads/2025/04/image_0-2.webp"/>
-</div>
-</div>
-<div class="twbb_cta-content-wrapper">
-<div class="twbb_cta-content-inner">
-<h5 class="twbb_cta-title">Property Overview</h5>
-<div class="twbb_cta-description">Quickly access key property details, including lease terms, tenant information, and payment history. Stay informed and make data-driven decisions.</div>
-</div>
-<div class="twbb_cta-button-wrapper">
-<div class="twbb_cta-buttons">
-<div class="twbb_cta-button-item twbb_cta-button-item__two twbb_cta-button-enable-yes">
-<a class="elementor-button twbb_cta-button elementor-size- twbb_cta-button__two" href="https://smartsevice.10web.me/properties//">Learn More            </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-1f03e72a elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb_cta-button-wrapper-left twbb_cta-valign-align-space_between twbb_cta-position-image-top twbb_cta-tablet-position-image-top twbb_cta-mobile-position-image-top twbb_cta-button-wrapper-left twbb_cta-button-wrapper-center twbb_cta-position-button-bottom twbb_cta-tablet-position-button-bottom twbb_cta-mobile-position-button-bottom elementor-invisible elementor-widget elementor-widget-twbb_call-to-action" data-element_type="widget" data-id="1f03e72a" data-settings='{"_animation":"fadeInUp"}' data-widget_type="twbb_call-to-action.default">
-<div class="elementor-widget-container">
-<div class="twbb_cta-wrapper">
-<div class="twbb_cta-image-background-wrapper">
-<span class="twbb_cta-image-background-overlay"></span>
-<div class="twbb_cta-image-html-tag">
-<noscript><img decoding="async" src="/wp-content/uploads/2025/04/tenweb_media_su9jddu5b.webp"/></noscript><img class="lazy" decoding="async" src="/wp-content/uploads/2025/04/tenweb_media_su9jddu5b.webp"/>
-</div>
-</div>
-<div class="twbb_cta-content-wrapper">
-<div class="twbb_cta-content-inner">
-<h5 class="twbb_cta-title">Financial Insights</h5>
-<div class="twbb_cta-description">Track rental income, expenses, and profitability with detailed financial reports. Gain valuable insights into your property's performance and optimize your investment strategy.</div>
-</div>
-<div class="twbb_cta-button-wrapper">
-<div class="twbb_cta-buttons">
-<div class="twbb_cta-button-item twbb_cta-button-item__two twbb_cta-button-enable-yes">
-<a class="elementor-button twbb_cta-button elementor-size- twbb_cta-button__two" href="#">Learn More            </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-4fe7f54b elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb_cta-button-wrapper-left twbb_cta-valign-align-space_between twbb_cta-position-image-top twbb_cta-tablet-position-image-top twbb_cta-mobile-position-image-top twbb_cta-button-wrapper-left twbb_cta-button-wrapper-center twbb_cta-position-button-bottom twbb_cta-tablet-position-button-bottom twbb_cta-mobile-position-button-bottom elementor-invisible elementor-widget elementor-widget-twbb_call-to-action" data-element_type="widget" data-id="4fe7f54b" data-settings='{"_animation":"fadeInUp"}' data-widget_type="twbb_call-to-action.default">
-<div class="elementor-widget-container">
-<div class="twbb_cta-wrapper">
-<div class="twbb_cta-image-background-wrapper">
-<span class="twbb_cta-image-background-overlay"></span>
-<div class="twbb_cta-image-html-tag">
-<noscript><img decoding="async" src="/wp-content/uploads/2025/04/tenweb_media_SSCGDV9ZY.webp"/></noscript><img class="lazy" decoding="async" src="/wp-content/uploads/2025/04/tenweb_media_SSCGDV9ZY.webp"/>
-</div>
-</div>
-<div class="twbb_cta-content-wrapper">
-<div class="twbb_cta-content-inner">
-<h5 class="twbb_cta-title">Maintenance Tracking</h5>
-<div class="twbb_cta-description">Efficiently manage maintenance requests and track repair progress. Ensure timely resolution of issues and maintain tenant satisfaction with our streamlined system.</div>
-</div>
-<div class="twbb_cta-button-wrapper">
-<div class="twbb_cta-buttons">
-<div class="twbb_cta-button-item twbb_cta-button-item__two twbb_cta-button-enable-yes">
-<a class="elementor-button twbb_cta-button elementor-size- twbb_cta-button__two" href="#">Learn More            </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-48af1d51 twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="48af1d51" data-settings='{"background_background":"classic"}' id="lease-management">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-44252b80 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="44252b80" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h2 class="elementor-heading-title elementor-size-default">Efficient <em>Lease Management</em> for Your Properties with Rental Smart Dashboard</h2> </div>
-</div>
-<div class="elementor-element elementor-element-13ec268 e-con-full e-flex e-con e-child" data-element_type="container" data-id="13ec268">
-<div class="elementor-element elementor-element-27a7a69e elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="27a7a69e" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>Our lease management tools provide a comprehensive overview of all lease-related activities. Rental Smart helps you track lease terms, manage renewals, and maintain detailed tenant information, ensuring compliance and maximizing occupancy rates.</p> </div>
-</div>
-<div class="elementor-element elementor-element-5dc5393e e-con-full e-flex e-con e-child" data-element_type="container" data-id="5dc5393e">
-<div class="elementor-element elementor-element-76682e41 e-con-full e-flex e-con e-child" data-element_type="container" data-id="76682e41">
-<div class="elementor-element elementor-element-7614e798 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="7614e798" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h4 class="elementor-heading-title elementor-size-default">Terms</h4> </div>
-</div>
-<div class="elementor-element elementor-element-386868fd elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="386868fd" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Easily view lease start and end dates, rent amounts, and renewal options.								</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-77bedcbc e-con-full e-flex e-con e-child" data-element_type="container" data-id="77bedcbc">
-<div class="elementor-element elementor-element-2cb4f02e elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="2cb4f02e" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h4 class="elementor-heading-title elementor-size-default">Tenants</h4> </div>
-</div>
-<div class="elementor-element elementor-element-677b443 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="677b443" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Access tenant contact information, lease history, and communication logs quickly.								</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-100d1285 twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="100d1285" data-settings='{"background_background":"classic"}' id="tenant-portal">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-750b0fd e-con-full e-flex e-con e-child" data-element_type="container" data-id="750b0fd">
-<div class="elementor-element elementor-element-25f09554 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="25f09554" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h2 class="elementor-heading-title elementor-size-default"><em>Empower</em> Your Tenants with Our <em>Online Portal</em></h2> </div>
-</div>
-<div class="elementor-element elementor-element-74d3e23b elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="74d3e23b" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Our tenant portal provides a seamless and convenient way for tenants to manage their accounts, submit maintenance requests, and communicate with our team. This easy-to-use platform enhances tenant satisfaction and streamlines communication, leading to better tenant retention and a more efficient management process for Smart Service.								</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-268375c7 e-con-full e-flex e-con e-child" data-element_type="container" data-id="268375c7">
-<div class="elementor-element elementor-element-4ea2eb35 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb_cta-button-wrapper-left twbb_cta-valign-align-space_between twbb_cta-position-image-top twbb_cta-tablet-position-image-top twbb_cta-mobile-position-image-top twbb_cta-button-wrapper-left twbb_cta-button-wrapper-center twbb_cta-position-button-bottom twbb_cta-tablet-position-button-bottom twbb_cta-mobile-position-button-bottom elementor-invisible elementor-widget elementor-widget-twbb_call-to-action" data-element_type="widget" data-id="4ea2eb35" data-settings='{"_animation":"fadeInUp"}' data-widget_type="twbb_call-to-action.default">
-<div class="elementor-widget-container">
-<div class="twbb_cta-wrapper">
-<div class="twbb_cta-image-background-wrapper">
-<span class="twbb_cta-image-background-overlay"></span>
-<div class="twbb_cta-image-html-tag">
-<noscript><img decoding="async" src="/wp-content/uploads/2025/04/image_0-3.webp"/></noscript><img class="lazy" decoding="async" src="/wp-content/uploads/2025/04/image_0-3.webp"/>
-</div>
-</div>
-<div class="twbb_cta-content-wrapper">
-<div class="twbb_cta-content-inner">
-<h5 class="twbb_cta-title"><span style="font-size: 24px;">Reliable Rent Collection Support</span><span style="font-family: Montserrat, sans-serif; font-size: 24px; font-style: normal; font-weight: 700;"></span></h5>
-<div class="twbb_cta-description">Stay on top of rent payments with tools that let you track payment status, flag late payments, and send automated reminders. This streamlined process helps ensure consistency, reduce delays, and keep your rental income on schedule.</div>
-</div>
-<div class="twbb_cta-button-wrapper">
-<div class="twbb_cta-buttons">
-<div class="twbb_cta-button-item twbb_cta-button-item__two twbb_cta-button-enable-yes">
-<a class="elementor-button twbb_cta-button elementor-size- twbb_cta-button__two" href="#">Learn More            </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-73661c9f elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb_cta-button-wrapper-left twbb_cta-valign-align-space_between twbb_cta-position-image-top twbb_cta-tablet-position-image-top twbb_cta-mobile-position-image-top twbb_cta-button-wrapper-left twbb_cta-button-wrapper-center twbb_cta-position-button-bottom twbb_cta-tablet-position-button-bottom twbb_cta-mobile-position-button-bottom elementor-invisible elementor-widget elementor-widget-twbb_call-to-action" data-element_type="widget" data-id="73661c9f" data-settings='{"_animation":"fadeInUp"}' data-widget_type="twbb_call-to-action.default">
-<div class="elementor-widget-container">
-<div class="twbb_cta-wrapper">
-<div class="twbb_cta-image-background-wrapper">
-<span class="twbb_cta-image-background-overlay"></span>
-<div class="twbb_cta-image-html-tag">
-<noscript><img decoding="async" src="/wp-content/uploads/2025/04/tenweb_media_s1abohvu3.webp"/></noscript><img class="lazy" decoding="async" src="/wp-content/uploads/2025/04/tenweb_media_s1abohvu3.webp"/>
-</div>
-</div>
-<div class="twbb_cta-content-wrapper">
-<div class="twbb_cta-content-inner">
-<h5 class="twbb_cta-title">Simplified Maintenance Requests</h5>
-<div class="twbb_cta-description">Tenants can submit maintenance requests directly through the portal, including photos and detailed descriptions. This streamlines the process, allowing us to address issues quickly and efficiently, improving tenant satisfaction.</div>
-</div>
-<div class="twbb_cta-button-wrapper">
-<div class="twbb_cta-buttons">
-<div class="twbb_cta-button-item twbb_cta-button-item__two twbb_cta-button-enable-yes">
-<a class="elementor-button twbb_cta-button elementor-size- twbb_cta-button__two" href="#">Learn More            </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-51481fae elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial twbb_cta-button-wrapper-left twbb_cta-valign-align-space_between twbb_cta-position-image-top twbb_cta-tablet-position-image-top twbb_cta-mobile-position-image-top twbb_cta-button-wrapper-left twbb_cta-button-wrapper-center twbb_cta-position-button-bottom twbb_cta-tablet-position-button-bottom twbb_cta-mobile-position-button-bottom elementor-invisible elementor-widget elementor-widget-twbb_call-to-action" data-element_type="widget" data-id="51481fae" data-settings='{"_animation":"fadeInUp"}' data-widget_type="twbb_call-to-action.default">
-<div class="elementor-widget-container">
-<div class="twbb_cta-wrapper">
-<div class="twbb_cta-image-background-wrapper">
-<span class="twbb_cta-image-background-overlay"></span>
-<div class="twbb_cta-image-html-tag">
-<noscript><img decoding="async" src="/wp-content/uploads/2025/04/image_0-4.webp"/></noscript><img class="lazy" decoding="async" src="/wp-content/uploads/2025/04/image_0-4.webp"/>
-</div>
-</div>
-<div class="twbb_cta-content-wrapper">
-<div class="twbb_cta-content-inner">
-<h5 class="twbb_cta-title">Direct Communication Channel</h5>
-<div class="twbb_cta-description">Our tenant portal facilitates direct communication between tenants and our property management team. This ensures that all inquiries and concerns are addressed promptly and effectively, fostering a positive tenant-manager relationship.</div>
-</div>
-<div class="twbb_cta-button-wrapper">
-<div class="twbb_cta-buttons">
-<div class="twbb_cta-button-item twbb_cta-button-item__two twbb_cta-button-enable-yes">
-<a class="elementor-button twbb_cta-button elementor-size- twbb_cta-button__two" href="#">Learn More            </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-13f5e76c twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="13f5e76c" data-settings='{"background_background":"classic"}' id="maintenance-and-repair">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-9e7aa65 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="9e7aa65" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h2 class="elementor-heading-title elementor-size-default">Efficient <em>Maintenance</em> and <em>Repair</em> Services for Your Properties</h2> </div>
-</div>
-<div class="elementor-element elementor-element-164cb0b4 e-con-full e-flex e-con e-child" data-element_type="container" data-id="164cb0b4">
-<div class="elementor-element elementor-element-2639978b elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="2639978b" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>At Rental Smart, we understand the importance of maintaining your properties in top condition. Our dedicated maintenance and repair team ensures that all issues are addressed promptly and effectively, minimizing disruptions and maximizing tenant satisfaction.</p> </div>
-</div>
-<div class="elementor-element elementor-element-5f80f2c9 e-con-full e-flex e-con e-child" data-element_type="container" data-id="5f80f2c9">
-<div class="elementor-element elementor-element-2ea689f8 e-con-full e-flex e-con e-child" data-element_type="container" data-id="2ea689f8">
-<div class="elementor-element elementor-element-6e39325c elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="6e39325c" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h4 class="elementor-heading-title elementor-size-default">History</h4> </div>
-</div>
-<div class="elementor-element elementor-element-60c2bd6d elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="60c2bd6d" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Access detailed records of all maintenance and repair work performed on your properties.								</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-322b8245 e-con-full e-flex e-con e-child" data-element_type="container" data-id="322b8245">
-<div class="elementor-element elementor-element-4ddb2dfc elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="4ddb2dfc" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h4 class="elementor-heading-title elementor-size-default">Request</h4> </div>
-</div>
-<div class="elementor-element elementor-element-3338ceed elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="3338ceed" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Submit maintenance requests easily through our online portal for quick resolution.								</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-62671527 twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="62671527" data-settings='{"background_background":"classic"}' id="financial-reporting">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-2d028ca9 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="2d028ca9" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h2 class="elementor-heading-title elementor-size-default">Comprehensive <em>Financial Reporting</em> for Your Property Investments with Rental Smart</h2> </div>
-</div>
-<div class="elementor-element elementor-element-2de5099c e-con-full e-flex e-con e-child" data-element_type="container" data-id="2de5099c">
-<div class="elementor-element elementor-element-f721293 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="f721293" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>Rental Smart provides detailed financial reporting, including rent collection summaries, expense tracking, and profitability analysis. Gain insights into your property’s performance and make informed decisions with our comprehensive reports.</p> </div>
-</div>
-<div class="elementor-element elementor-element-68adbabe e-con-full e-flex e-con e-child" data-element_type="container" data-id="68adbabe">
-<div class="elementor-element elementor-element-f5d96e4 e-con-full e-flex e-con e-child" data-element_type="container" data-id="f5d96e4">
-<div class="elementor-element elementor-element-5db4c278 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="5db4c278" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h4 class="elementor-heading-title elementor-size-default">Rent Collection</h4> </div>
-</div>
-<div class="elementor-element elementor-element-1b70dac3 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="1b70dac3" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Track rent payments efficiently and generate detailed reports on rent collection performance.								</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-608295df e-con-full e-flex e-con e-child" data-element_type="container" data-id="608295df">
-<div class="elementor-element elementor-element-547c511a elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-heading" data-element_type="widget" data-id="547c511a" data-settings='{"_animation":"fadeInUp"}' data-widget_type="heading.default">
-<div class="elementor-widget-container">
-<h4 class="elementor-heading-title elementor-size-default">Expense Tracking</h4> </div>
-</div>
-<div class="elementor-element elementor-element-20cf8fb6 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-invisible elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="20cf8fb6" data-settings='{"_animation":"fadeInUp"}' data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-<p>Monitor property-related expenses and gain insights into cost-saving opportunities.</p> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="elementor elementor-140" data-elementor-id="140" data-elementor-type="twbb_footer">
-<div class="elementor-element elementor-element-7mnpnpji twbb_section e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="7mnpnpji" data-settings='{"background_background":"classic"}' id="footer">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-tq8hrm1v e-con-full e-flex e-con e-child" data-element_type="container" data-id="tq8hrm1v">
-<div class="elementor-element elementor-element-6f5xkg2c e-con-full e-flex e-con e-child" data-element_type="container" data-id="6f5xkg2c">
-</div>
-<div class="elementor-element elementor-element-3frgp8v7 twbb-nav-menu__align-center twbb-responsive-nav-menu--horizontal twbb-responsive-nav-menu--tablet-dropdown twbb-responsive-nav-menu--mobile-dropdown twbb-nav-menu--indicator-classic elementor-widget elementor-widget-twbb-nav-menu" data-element_type="widget" data-id="3frgp8v7" data-settings='{"layout":"horizontal","layout_tablet":"dropdown","layout_mobile":"dropdown"}' data-widget_type="twbb-nav-menu.default">
-<div class="elementor-widget-container">
-<nav class="twbb-nav-menu--main twbb-nav-menu__container e--pointer-none">
-<ul class="twbb-nav-menu twbb-menu_term_id-6" id="menu-1-3frgp8v7">
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-135'><a class="twbb-item" href="/services/">Services</a></li>
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-136'><a class="twbb-item" href="/resources/">Resources</a></li>
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-134'><a class="twbb-item" href="/about-us/">About Us</a></li></ul> </nav>
-<nav class="twbb-nav-menu--dropdown twbb-nav-menu__container">
-<ul class="twbb-nav-menu twbb-menu_term_id-6" id="menu-2-3frgp8v7">
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-135'><a class="twbb-item" href="/services/">Services</a></li>
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-136'><a class="twbb-item" href="/resources/">Resources</a></li>
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-134'><a class="twbb-item" href="/about-us/">About Us</a></li></ul> </nav>
-</div>
-</div>
-<div class="elementor-element elementor-element-8fdod3p3 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial e-grid-align-right e-grid-align-mobile-center elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-element_type="widget" data-id="8fdod3p3" data-widget_type="social-icons.default">
-<div class="elementor-widget-container">
-<div class="elementor-social-icons-wrapper elementor-grid" role="list">
-<span class="elementor-grid-item" role="listitem">
-<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-f7ae9fe" href="https://www.facebook.com/profile.php?id=61573815145514" target="_blank">
-<span class="elementor-screen-only">Facebook</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg> </a>
-</span>
-<span class="elementor-grid-item" role="listitem">
-<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-bd3ffb7" target="_blank">
-<span class="elementor-screen-only">Linkedin</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg> </a>
-</span>
-<span class="elementor-grid-item" role="listitem">
-<a class="elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-repeater-item-f3b86f7" href="https://x.com/HelloxTechLtd" target="_blank">
-<span class="elementor-screen-only">X-twitter</span>
-<svg aria-hidden="true" class="e-font-icon-svg e-fab-x-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg> </a>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-jp52yseg elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="jp52yseg" data-widget_type="divider.default">
-<div class="elementor-widget-container">
-<div class="elementor-divider">
-<span class="elementor-divider-separator">
-</span>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-vtrsqrbi e-con-full e-flex e-con e-child" data-element_type="container" data-id="vtrsqrbi">
-<div class="elementor-element elementor-element-rvrw727d elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="rvrw727d" data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-									Copyright © 2025 HelloX Tech Ltd. All rights reserved.								</div>
-</div>
-<div class="elementor-element elementor-element-hklo3up0 twbb-nav-menu__align-left twbb-responsive-nav-menu--horizontal twbb-responsive-nav-menu--tablet-dropdown twbb-responsive-nav-menu--mobile-dropdown twbb-nav-menu--indicator-classic elementor-widget elementor-widget-twbb-nav-menu" data-element_type="widget" data-id="hklo3up0" data-settings='{"layout":"horizontal","layout_tablet":"dropdown","layout_mobile":"dropdown"}' data-widget_type="twbb-nav-menu.default">
-<div class="elementor-widget-container">
-<nav class="twbb-nav-menu--main twbb-nav-menu__container e--pointer-none">
-<ul class="twbb-nav-menu twbb-menu_term_id-7" id="menu-1-hklo3up0"><li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-custom menu-item-object-custom menu-item-137'><a class="twbb-item" href="#terms-&amp;-conditions">Terms &amp; Conditions</a></li>
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-138'><a class="twbb-item" href="/privacy-policy/">Privacy Policy</a></li>
-</ul> </nav>
-<nav class="twbb-nav-menu--dropdown twbb-nav-menu__container">
-<ul class="twbb-nav-menu twbb-menu_term_id-7" id="menu-2-hklo3up0"><li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-custom menu-item-object-custom menu-item-137'><a class="twbb-item" href="#terms-&amp;-conditions">Terms &amp; Conditions</a></li>
-<li class='a:1:{i:0;s:0:"";} menu-item menu-item-type-post_type menu-item-object-page menu-item-138'><a class="twbb-item" href="/privacy-policy/">Privacy Policy</a></li>
-</ul> </nav>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script data-pagespeed-no-defer="" data-two-no-delay="">
-                            ( function () {
-                              window.addEventListener( "two_css_loaded", function () {
-                                window.two_observer = new IntersectionObserver( items => {
-                                  items.forEach( item => {
-                                    if (item.isIntersecting) {
-                                        if (item.target.dataset.settings) {
-                                            let settings = JSON.parse(item.target.dataset.settings);
-                                            let animation = settings.animation ? settings.animation : settings._animation ? settings._animation : "zoomIn";
-                                            let delay = settings.animation_delay ? settings.animation_delay : settings._animation_delay ? settings._animation_delay : 0;
-                                            setTimeout(() => {
-                                                item.target.className = item.target.className.replace("elementor-invisible", "") + " animated " + animation;
-                                            }, delay);
-                                            delete settings.animation;
-                                            delete settings._animation;
-                                            item.target.dataset.settings = JSON.stringify(settings);
-                                        } else {
-                                            item.target.className = item.target.className.replace("elementor-invisible", "") + " animated zoomIn";
-                                        }
-                                    }
-                                  } )
-                                }, {} );
-                                document.querySelectorAll( ".elementor-invisible" ).forEach( e => {
-                                  window.two_observer.observe( e )
-                                } )
-                              } )
-                            } )();
-                            </script><script data-pagespeed-no-defer="" data-two-no-delay="">window["two_svg_placeholder"] = "data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E#}"</script><script data-pagespeed-no-defer="" data-two-no-delay="" src="/wp-content/plugins/tenweb-speed-optimizer/includes/external/js/vanilla-lazyload/lazyload.min.js" type="text/javascript"></script><script data-pagespeed-no-defer="" data-two-no-delay="" src="/wp-content/plugins/tenweb-speed-optimizer/includes/external/js/vanilla-lazyload/two_bg_vanilla.js" type="text/javascript"></script><script data-pagespeed-no-defer="" data-two-no-delay="">
-                                if(typeof two_lazyLoadInstance === "undefined"){
-                                    window.two_lazyLoadInstance = new LazyLoad({
-                                          "callback_applied": function(element, instance){
-                                                                let settings = instance._settings;
-                                                                var bgDataValue = element.getAttribute("data-" + settings.data_bg_multi);
-                                                                if (!bgDataValue) {
-                                                                    return;
-                                                                }
-                                                                if(window.getComputedStyle(element).getPropertyValue("background-image") !== bgDataValue) {
-                                                                    let style = element.getAttribute("style");
-                                                                    style += "background-image: " + bgDataValue + " !important;";
-                                                                    element.setAttribute("style", style);
-                                                                }
-                                                            }
-                                   });
-                                }else{
-                                     two_lazyLoadInstance.update();
-                                }
-                                window.addEventListener("scroll", function() {
-                                   if(two_lazyLoadInstance.toLoadCount>0){
-                                      two_lazyLoadInstance.update();
-                                   }
-                                });
-                                /*
-                                 * Updates lazy-load instance from every ajax request
-                                 * When we use Ajax requests and get pictures back, we need to update lazy-load instance
-                                 * */
-                                if (window.jQuery) {
-                                    jQuery.ajaxSetup({
-                                            complete: function() {
-                                                two_lazyLoadInstance.update();
-                                            }
-                                        });
-                                }
-                            </script></body>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HelloX Tech" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:title" content="Rental Smart | Property Management Platform for British Columbia" />
+    <meta
+      property="og:description"
+      content="Discover Rental Smart features, pricing, owner portal tools, and resident center workflows in one page."
+    />
+    <meta property="og:url" content="https://hellox.ca/rental-smart/" />
+    <meta property="og:image" content="https://hellox.ca/wp-content/uploads/2025/04/tenweb_media_s3zteebws.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rental Smart | Property Management Platform for British Columbia" />
+    <meta
+      name="twitter:description"
+      content="Discover Rental Smart features, pricing, owner portal tools, and resident center workflows in one page."
+    />
+    <meta name="twitter:image" content="https://hellox.ca/wp-content/uploads/2025/04/tenweb_media_s3zteebws.webp" />
+
+    <link href="/wp-content/uploads/2025/02/HelloX_Logo--150x112.jpg" rel="icon" sizes="32x32" />
+    <link href="/wp-content/uploads/2025/02/HelloX_Logo-.jpg" rel="icon" sizes="192x192" />
+    <link href="/wp-content/uploads/2025/02/HelloX_Logo-.jpg" rel="apple-touch-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #f5f8ef;
+        --panel: #ffffff;
+        --ink: #263328;
+        --muted: #5c6e5f;
+        --brand: #9cbb58;
+        --brand-dark: #7f9f43;
+        --stroke: #dbe5cf;
+        --hero-dark: #253719;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #edf4e3 0%, var(--bg) 42%, #f8fbf3 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page-shell {
+        min-height: 100vh;
+      }
+
+      .container {
+        width: min(1160px, 92vw);
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+      }
+
+      .topbar-row {
+        min-height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand img {
+        height: 38px;
+        width: auto;
+      }
+
+      .brand strong {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.38rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+      }
+
+      .brand strong .muted {
+        color: #3d3d3d;
+      }
+
+      .brand strong .accent {
+        color: var(--brand);
+      }
+
+      .nav-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px;
+        border-radius: 999px;
+        border: 1px solid var(--stroke);
+        background: #f7fbeF;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #4f6152;
+        font-size: 0.82rem;
+        font-weight: 700;
+        padding: 8px 12px;
+        border-radius: 999px;
+        transition: all 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: #253326;
+        background: #ffffff;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 10px 16px;
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        background: var(--brand-dark);
+      }
+
+      .btn-secondary {
+        border: 1px solid #cddab9;
+        color: #304431;
+        background: #f8fbf3;
+      }
+
+      .btn-secondary:hover {
+        background: #eef5e2;
+      }
+
+      .hero {
+        margin-top: 36px;
+      }
+
+      .hero-wrap {
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: radial-gradient(circle at 12% 8%, #3f5b2a 0%, #2e4320 38%, var(--hero-dark) 100%);
+        color: #f2f7e9;
+        padding: 40px clamp(20px, 4vw, 52px);
+        box-shadow: 0 28px 48px rgba(26, 41, 20, 0.25);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        font-weight: 700;
+        font-size: 0.72rem;
+        color: #d7e9b8;
+      }
+
+      .hero h1 {
+        margin: 12px 0 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(1.9rem, 4.6vw, 3.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        max-width: 17ch;
+      }
+
+      .hero p {
+        margin: 16px 0 0;
+        max-width: 68ch;
+        color: #dbe8cd;
+        line-height: 1.66;
+        font-size: 1.02rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .quick-links {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      .quick-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid rgba(216, 232, 188, 0.35);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        text-decoration: none;
+        color: #f2f7e9;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 12px 14px;
+        transition: all 0.2s ease;
+      }
+
+      .quick-link:hover {
+        background: rgba(255, 255, 255, 0.14);
+        border-color: rgba(216, 232, 188, 0.6);
+      }
+
+      .section {
+        margin-top: 34px;
+        padding: 26px;
+        border-radius: 22px;
+        border: 1px solid var(--stroke);
+        background: var(--panel);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.04);
+      }
+
+      .section h2 {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(1.25rem, 2.8vw, 1.85rem);
+        letter-spacing: -0.01em;
+      }
+
+      .section > p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .feature-grid,
+      .portal-grid,
+      .related-grid,
+      .pricing-grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+
+      .card {
+        border: 1px solid var(--stroke);
+        border-radius: 14px;
+        background: #fbfdf8;
+        padding: 14px;
+      }
+
+      .card h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .card p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .price-card {
+        border: 1px solid var(--stroke);
+        border-radius: 16px;
+        background: #ffffff;
+        padding: 16px;
+      }
+
+      .price-card h3 {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.02rem;
+      }
+
+      .price-tag {
+        margin-top: 8px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #2f4022;
+      }
+
+      .price-card ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 0.9rem;
+      }
+
+      .price-note {
+        margin-top: 10px;
+        color: #5a6b5d;
+        font-size: 0.88rem;
+      }
+
+      .related-link {
+        display: block;
+        text-decoration: none;
+        border: 1px solid var(--stroke);
+        border-radius: 14px;
+        background: #ffffff;
+        padding: 13px;
+        transition: all 0.2s ease;
+      }
+
+      .related-link:hover {
+        border-color: #c7d9a8;
+        transform: translateY(-1px);
+        box-shadow: 0 8px 14px rgba(0, 0, 0, 0.05);
+      }
+
+      .related-link strong {
+        display: block;
+        font-size: 0.96rem;
+      }
+
+      .related-link span {
+        display: block;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.87rem;
+      }
+
+      .footer {
+        margin-top: 44px;
+        border-top: 1px solid var(--stroke);
+        background: #ffffff;
+      }
+
+      .footer-row {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        color: #627263;
+        font-size: 0.86rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .footer-links a:hover {
+        color: var(--brand-dark);
+      }
+
+      @media (max-width: 980px) {
+        .nav-links {
+          display: none;
+        }
+
+        .topbar-row {
+          min-height: 66px;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "name": "Rental Smart",
+            "url": "https://hellox.ca/rental-smart/",
+            "description": "Rental Smart platform overview by HelloX Tech."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Rental Smart",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "provider": {
+              "@type": "Organization",
+              "name": "HelloX Tech",
+              "url": "https://hellox.ca/"
+            },
+            "url": "https://hellox.ca/rental-smart/",
+            "description": "Property management platform for listings, leasing, billing, owner reporting, and resident operations."
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="container topbar-row">
+          <a class="brand" href="/">
+            <img src="/wp-content/uploads/2025/02/logo_rzy9mznW.webp" alt="HelloX Tech logo" />
+            <strong><span class="muted">Rental </span><span class="accent">Smart</span></strong>
+          </a>
+
+          <nav class="nav-links" aria-label="Main">
+            <a href="/services/">Services</a>
+            <a href="/resources/">Resources</a>
+            <a href="/about-us/">About Us</a>
+            <a href="/contact-us/">Contact</a>
+          </nav>
+
+          <a class="btn btn-primary" href="/contact-us/">Book Demo</a>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="hero">
+          <div class="hero-wrap">
+            <span class="eyebrow">Rental Smart Platform</span>
+            <h1>Property management and rental operations in one BC-focused system.</h1>
+            <p>
+              Rental Smart helps landlords attract qualified renters and helps residents manage tenancy tasks through one connected experience. From listings and leasing to rent workflows and maintenance updates, your team stays aligned end-to-end.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/contact-us/">Get Started</a>
+              <a class="btn btn-secondary" href="/services/">View Services</a>
+            </div>
+
+            <div class="quick-links" aria-label="Sections">
+              <a class="quick-link" href="#features"><span>Features</span><span>></span></a>
+              <a class="quick-link" href="#pricing"><span>Pricing</span><span>></span></a>
+              <a class="quick-link" href="#owner-portal"><span>Owner Portal</span><span>></span></a>
+              <a class="quick-link" href="#resident-center"><span>Resident Center</span><span>></span></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="section">
+          <h2>Features</h2>
+          <p>Designed for real property workflows, not generic CRM screens.</p>
+          <div class="feature-grid">
+            <article class="card">
+              <h3>Verified listing management</h3>
+              <p>Create listing pages with media, availability, and screening-ready details for BC renters.</p>
+            </article>
+            <article class="card">
+              <h3>Application and inquiry capture</h3>
+              <p>Track interested renters, review applications, and route follow-up tasks through one queue.</p>
+            </article>
+            <article class="card">
+              <h3>Lease lifecycle tracking</h3>
+              <p>Manage move-ins, renewals, recurring charges, and tenancy milestones from one dashboard.</p>
+            </article>
+            <article class="card">
+              <h3>Rent workflow visibility</h3>
+              <p>Monitor billed, paid, and overdue balances with portfolio-level and unit-level drilldown.</p>
+            </article>
+            <article class="card">
+              <h3>Maintenance operations</h3>
+              <p>Receive requests, track status updates, and maintain service history for each property.</p>
+            </article>
+            <article class="card">
+              <h3>Role-based experience</h3>
+              <p>Separate tools for owners, managers, and residents while keeping data in one platform.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="pricing" class="section">
+          <h2>Pricing</h2>
+          <p>Flexible packaging based on portfolio size, workflow scope, and implementation needs.</p>
+          <div class="pricing-grid">
+            <article class="price-card">
+              <h3>Starter</h3>
+              <div class="price-tag">For small portfolios</div>
+              <ul>
+                <li>Core listings and inquiries</li>
+                <li>Resident onboarding basics</li>
+                <li>Essential lease tracking</li>
+              </ul>
+            </article>
+            <article class="price-card">
+              <h3>Growth</h3>
+              <div class="price-tag">For active managers</div>
+              <ul>
+                <li>Recurring charge workflows</li>
+                <li>Owner reporting views</li>
+                <li>Maintenance process tracking</li>
+              </ul>
+            </article>
+            <article class="price-card">
+              <h3>Enterprise</h3>
+              <div class="price-tag">For multi-entity teams</div>
+              <ul>
+                <li>Advanced reporting and controls</li>
+                <li>Automation and integration support</li>
+                <li>Implementation and enablement services</li>
+              </ul>
+            </article>
+          </div>
+          <p class="price-note">Final pricing is scoped per portfolio and workflow complexity.</p>
+        </section>
+
+        <section id="owner-portal" class="section">
+          <h2>Owner Portal</h2>
+          <p>Give owners and property leads immediate visibility across operational and financial metrics.</p>
+          <div class="portal-grid">
+            <article class="card">
+              <h3>Occupancy snapshot</h3>
+              <p>Track occupied, vacant, and upcoming units by property in one summary view.</p>
+            </article>
+            <article class="card">
+              <h3>Collection health</h3>
+              <p>Review payment status, aging balances, and billing trends without manual reporting.</p>
+            </article>
+            <article class="card">
+              <h3>Renewal risk visibility</h3>
+              <p>Monitor upcoming lease events and prioritize proactive retention actions.</p>
+            </article>
+            <article class="card">
+              <h3>Service oversight</h3>
+              <p>See active maintenance volume and completion performance across the portfolio.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="resident-center" class="section">
+          <h2>Resident Center</h2>
+          <p>Self-service tools that improve resident experience and reduce back-and-forth with staff.</p>
+          <div class="portal-grid">
+            <article class="card">
+              <h3>Rent and billing access</h3>
+              <p>Residents can check charges and payment status in one place.</p>
+            </article>
+            <article class="card">
+              <h3>Maintenance requests</h3>
+              <p>Submit issues with details and track progress through completion.</p>
+            </article>
+            <article class="card">
+              <h3>Tenancy information</h3>
+              <p>Keep lease details, account context, and service history accessible throughout residency.</p>
+            </article>
+            <article class="card">
+              <h3>Communication continuity</h3>
+              <p>Maintain cleaner handoff between resident updates and property team actions.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Explore Rental Smart</h2>
+          <div class="related-grid">
+            <a class="related-link" href="#features">
+              <strong>Feature Overview</strong>
+              <span>See how Rental Smart supports end-to-end rental operations.</span>
+            </a>
+            <a class="related-link" href="#pricing">
+              <strong>Plan Guidance</strong>
+              <span>Compare options for owner-operators and larger management teams.</span>
+            </a>
+            <a class="related-link" href="/contact-us/">
+              <strong>Book a Demo</strong>
+              <span>Talk with HelloX Tech about your current process and rollout timeline.</span>
+            </a>
+            <a class="related-link" href="/services/">
+              <strong>Related Services</strong>
+              <span>Explore Dynamics 365 and Power Platform services from HelloX Tech.</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-row">
+          <span>&copy; 2026 HelloX Tech. Rental Smart.</span>
+          <nav class="footer-links" aria-label="Footer links">
+            <a href="/services/">Services</a>
+            <a href="/resources/">Resources</a>
+            <a href="/about-us/">About Us</a>
+            <a href="/contact-us/">Contact</a>
+          </nav>
+          <span>BC Residential Tenancy aligned workflows</span>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
